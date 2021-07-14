@@ -51,7 +51,6 @@ class _StockFilterState extends State<StockFilter> {
                   vertical: MediaQuery.of(context).size.height * 0.02,
                 ),
                 decoration: BoxDecoration(
-                  // color: Colors.purple,
                   border: Border(
                     left: BorderSide(
                       width: 1,
