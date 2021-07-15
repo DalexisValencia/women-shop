@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:women_shop/models/typesModel.dart';
+import 'package:women_shop/models/CategoriesModel.dart';
 
 class ProductsModel {
   final String name;
-  final TypesModel type;
+  final CategoriesModel type;
   final String image;
   final Color loadedColor;
   final String price;

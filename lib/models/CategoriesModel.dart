@@ -1,6 +1,6 @@
-class TypesModel {
+class CategoriesModel {
   final String name;
-  TypesModel({
+  CategoriesModel({
     this.name,
   });
 }
