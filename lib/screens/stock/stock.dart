@@ -85,6 +85,55 @@ class StockScreen extends StatelessWidget {
         ),
       ),
       body: StockBody(),
+      bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        selectedFontSize: 0,
+        unselectedFontSize: 0,
+        currentIndex: 2,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+              color: Colors.black,
+              size: 24,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.search_outlined,
+              color: Colors.black,
+              size: 24,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_bag_outlined,
+              color: Colors.black,
+              size: 24,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.favorite_outline,
+              color: Colors.black,
+              size: 24,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.account_circle_outlined,
+              color: Colors.black,
+              size: 24,
+            ),
+            label: '',
+          ),
+        ],
+      ),
     );
   }
 }
