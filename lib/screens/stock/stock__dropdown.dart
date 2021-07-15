@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/lists/categories.dart';
-import 'package:women_shop/models/CategoriesModel.dart';
 
 class DropdownFilter extends StatefulWidget {
   const DropdownFilter({Key key}) : super(key: key);
@@ -17,7 +16,6 @@ class _DropdownFilterState extends State<DropdownFilter> {
       child: Center(
         child: DropdownButton<String>(
           underline: SizedBox(),
-          // isExpanded: true,
           value: dropdownValue,
           icon: Container(
             margin: EdgeInsets.only(
@@ -34,21 +32,14 @@ class _DropdownFilterState extends State<DropdownFilter> {
                 fontWeight: FontWeight.w400,
               ),
           onChanged: (String value) {
-            // print(value);
             setState(() {
               dropdownValue = value;
             });
           },
           items: categories.map(
             (e) {
-              // print(e.name);
               return DropdownMenuItem(
                 value: e.name,
-                // child: Container(
-                //   width: ,
-                //   color: Colors.red,
-                //   child: Text("ino"),
-                // ),
                 child: Text(
                   e.name,
                   textAlign: TextAlign.center,
