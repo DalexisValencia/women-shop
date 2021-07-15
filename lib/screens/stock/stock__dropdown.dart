@@ -24,9 +24,12 @@ class _DropdownFilterState extends State<DropdownFilter> {
               Icons.arrow_drop_down,
             ),
           ),
-          iconSize: 24,
+          iconSize: 28,
           elevation: 0,
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.subtitle1.copyWith(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+              ),
           onChanged: (String value) {
             print(value);
           },

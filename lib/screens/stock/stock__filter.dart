@@ -62,7 +62,10 @@ class _StockFilterState extends State<StockFilter> {
                   child: Text(
                     "Filter",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: Theme.of(context).textTheme.subtitle1.copyWith(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                        ),
                   ),
                 ),
               ),

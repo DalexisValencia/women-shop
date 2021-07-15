@@ -97,18 +97,7 @@ class StockBody extends StatefulWidget {
 }
 
 class _StockBodyState extends State<StockBody> {
-  double filterContainerSize = 100; // min 80 max 100
-  scrollChange(double value) {
-    print('esta cambiando');
-    print(value);
-    // if (value > 50 && value < 80) {
-    //   setState(() {
-    //     scrollPosition = value;
-    //   });
-    //   print(value);
-    //   print("lo mismo");
-    // }
-  }
+  double filterContainerSize = 100; // min 60 max 100
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +107,7 @@ class _StockBodyState extends State<StockBody> {
           StockFilter(
             height: filterContainerSize,
           ),
-          Text(filterContainerSize.toString()),
+          // Text(filterContainerSize.toString()),
           Expanded(
             child: ScrollBehaviorWidget(
               onScrollChange: (double value) {
@@ -126,9 +115,6 @@ class _StockBodyState extends State<StockBody> {
                   setState(() {
                     filterContainerSize = value;
                   });
-                  print(":::::");
-                  print(value);
-                  print(":::::");
                 }
               },
             ),
