@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:women_shop/bloc/categories_bloc.dart';
 import 'package:women_shop/constants/conts.dart';
 
 class ScrollBehaviorWidget extends StatefulWidget {
@@ -17,28 +19,36 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
   Widget build(BuildContext context) {
     return NotificationListener<ScrollNotification>(
       onNotification: (scrollNotification) {
-        print("si hay scroll");
         // if (scrollNotification is ScrollStartNotification) {}
         if (scrollNotification is ScrollUpdateNotification) {
-          widget.onScrollChange(scrollNotification.metrics.extentAfter);
+          // scrollNotification.metrics.extentAfter
+          // print(scrollNotification.metrics.pixels);
+          widget.onScrollChange(scrollNotification.metrics.pixels);
         }
         // if (scrollNotification is ScrollEndNotification) {}
         return;
       },
       // child: SingleChildScrollView(
-      child: GridView.count(
-        crossAxisCount: 2,
-        childAspectRatio: 9 / 12,
-        padding: EdgeInsets.symmetric(
-          vertical: 20,
-          horizontal: MediaQuery.of(context).size.width * 0.05,
-        ),
-        mainAxisSpacing: MediaQuery.of(context).size.height * 0.02,
-        crossAxisSpacing: MediaQuery.of(context).size.width * pHorizontally,
-        children: List.generate(
-          10,
-          (index) => ProductCard(),
-        ),
+      child: BlocBuilder<CategoriesBloc, CategoriesState>(
+        builder: (BuildContext context, CategoriesState state) {
+          print(":::::");
+          print(state);
+          print(":::::");
+          return GridView.count(
+            crossAxisCount: 2,
+            childAspectRatio: 9 / 12,
+            padding: EdgeInsets.symmetric(
+              vertical: 20,
+              horizontal: MediaQuery.of(context).size.width * 0.05,
+            ),
+            mainAxisSpacing: MediaQuery.of(context).size.height * 0.02,
+            crossAxisSpacing: MediaQuery.of(context).size.width * pHorizontally,
+            children: List.generate(
+              10,
+              (index) => ProductCard(),
+            ),
+          );
+        },
       ),
     );
   }
@@ -50,22 +60,12 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-          // border: Border.all(
-          //   width: 1,
-          //   color: Colors.black,
-          // ),
-          ),
       child: Column(
         children: [
           Expanded(
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.grey[400],
-                // border: Border.all(
-                //   color: Colors.red,
-                //   width: 1,
-                // ),
               ),
               child: Center(
                 child: Text("card"),
@@ -103,16 +103,6 @@ class ProductCard extends StatelessWidget {
                       color: Colors.grey,
                       size: 18,
                     )
-                    // MaterialButton(
-                    //   elevation: 0,
-                    //   height: 50,
-                    //   minWidth: 50,
-                    //   padding: EdgeInsets.all(0),
-                    //   // color: Colors.red,
-                    //   shape: CircleBorder(),
-                    //   onPressed: () {},
-                    //   child: Icon(Icons.favorite_border),
-                    // )
                   ],
                 )
               ],

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:women_shop/bloc/categories_bloc.dart';
 import 'package:women_shop/lists/categories.dart';
 
 class DropdownFilter extends StatefulWidget {
@@ -10,6 +12,13 @@ class DropdownFilter extends StatefulWidget {
 
 class _DropdownFilterState extends State<DropdownFilter> {
   String dropdownValue = 'Shirt';
+  CategoriesBloc categoriesinstance;
+  @override
+  void initState() {
+    categoriesinstance = BlocProvider.of<CategoriesBloc>(context);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,6 +41,7 @@ class _DropdownFilterState extends State<DropdownFilter> {
                 fontWeight: FontWeight.w400,
               ),
           onChanged: (String value) {
+            categoriesinstance.add(ChangeCategory(value));
             setState(() {
               dropdownValue = value;
             });
