@@ -158,7 +158,8 @@ class _StockBodyState extends State<StockBody> {
     return Container(
       child: BlocBuilder<CategoriesBloc, CategoriesState>(
         builder: (BuildContext context, CategoriesState state) {
-          CategoriesInitial stateModel = state;
+          CategoriesState stateModel = state;
+          print(stateModel);
           // print(stateModel.category);
           // return Column(
           //   children: [
@@ -178,7 +179,7 @@ class _StockBodyState extends State<StockBody> {
               StockFilter(
                 height: filterContainerSize,
               ),
-              Text(stateModel.category),
+              // Text(stateModel.category),
               Expanded(
                 child: ScrollBehaviorWidget(
                   onScrollChange: (double value) {

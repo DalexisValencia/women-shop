@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:women_shop/bloc/categories_bloc.dart';
 import 'package:women_shop/constants/conts.dart';
+import 'package:women_shop/models/productsModel.dart';
 
 class ScrollBehaviorWidget extends StatefulWidget {
   const ScrollBehaviorWidget({
@@ -30,24 +31,51 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
       },
       // child: SingleChildScrollView(
       child: BlocBuilder<CategoriesBloc, CategoriesState>(
-        builder: (BuildContext context, CategoriesState state) {
-          print(":::::");
-          print(state);
-          print(":::::");
-          return GridView.count(
-            crossAxisCount: 2,
-            childAspectRatio: 9 / 12,
-            padding: EdgeInsets.symmetric(
-              vertical: 20,
-              horizontal: MediaQuery.of(context).size.width * 0.05,
-            ),
-            mainAxisSpacing: MediaQuery.of(context).size.height * 0.02,
-            crossAxisSpacing: MediaQuery.of(context).size.width * pHorizontally,
-            children: List.generate(
-              10,
-              (index) => ProductCard(),
-            ),
-          );
+        builder: (BuildContext context, state) {
+          // print(state.props[0]);
+          List<ProductsModel> products = state.props[0];
+          // print(":::::1111");
+          print(products);
+          // print(":::::1111");
+          return products.length == 0
+              ? Center(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.add_alert_rounded,
+                        size: 70,
+                        color: Colors.grey[400],
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "NO HAY RESULTADOS",
+                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                              color: Colors.grey[500],
+                            ),
+                      ),
+                    ],
+                  ),
+                )
+              : GridView.count(
+                  crossAxisCount: 2,
+                  childAspectRatio: 9 / 12,
+                  padding: EdgeInsets.symmetric(
+                    vertical: 20,
+                    horizontal: MediaQuery.of(context).size.width * 0.05,
+                  ),
+                  mainAxisSpacing: MediaQuery.of(context).size.height * 0.02,
+                  crossAxisSpacing:
+                      MediaQuery.of(context).size.width * pHorizontally,
+                  // children: List.generate(
+                  //   10,
+                  //   (index) => ProductCard(),
+                  // ),
+                  children: products.map((item) => ProductCard()).toList(),
+                );
         },
       ),
     );
