@@ -22,22 +22,6 @@ class DetailsScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Container(
-              //   child: Container(
-              //     width: 40,
-              //     child: ElevatedButton(
-              //       onPressed: () {},
-              //       child: const Icon(Icons.arrow_back_ios),
-              //       style: ElevatedButton.styleFrom(
-              //         elevation: 0,
-              //         padding: EdgeInsets.all(0),
-              //         shape: new RoundedRectangleBorder(
-              //           borderRadius: new BorderRadius.circular(100.0),
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
               Container(
                 width: 45,
                 height: 45,
@@ -57,6 +41,45 @@ class DetailsScreen extends StatelessWidget {
               ActionsAppBar(),
             ],
           ),
+        ),
+      ),
+      body: Container(
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                color: Colors.red,
+              ),
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.orange,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Classic Jacket"),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("\$80.00"),
+                        Row(
+                          children: [
+                            Text("Save"),
+                            Icon(Icons.favorite_border_outlined),
+                          ],
+                        )
+                        // ...[
+                        //   Text("Save"),
+                        //   Icon(Icons.favorite_border_outlined),
+                        // ]
+                      ],
+                    ),
+                    ProductDescription()
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -120,19 +143,59 @@ class ActionsAppBar extends StatelessWidget {
             ),
           ),
         ),
-        // SizedBox(
-        //   width: 45,
-        //   height: 45,
-        //   child: MaterialButton(
-        //     splashColor: Colors.red,
-        //     onPressed: () {},
-        //     child: const Icon(Icons.download_outlined),
-        //     padding: EdgeInsets.all(0),
-        //     shape: RoundedRectangleBorder(
-        //       borderRadius: BorderRadius.circular(50),
-        //     ),
-        //   ),
-        // ),
+      ],
+    );
+  }
+}
+
+class ProductDescription extends StatelessWidget {
+  const ProductDescription({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text("Description"),
+            Row(
+              children: [
+                Text("23 Rating"),
+                Icon(Icons.star_rate_rounded),
+                Icon(Icons.star_rate_rounded),
+                Icon(Icons.star_rate_rounded),
+                Icon(Icons.star_rate_rounded),
+                Icon(
+                  Icons.star_rate_rounded,
+                  color: Colors.grey,
+                ),
+              ],
+            ),
+            // ...[
+            //   Text("23 Rating"),
+            //   ...[
+            //     Icon(Icons.star_rate_rounded),
+            //     Icon(Icons.star_rate_rounded),
+            //     Icon(Icons.star_rate_rounded),
+            //     Icon(Icons.star_rate_rounded),
+            //     Icon(Icons.star_outline_rounded),
+            //   ]
+            // ],
+          ],
+        ),
+        Container(
+          child: Text(
+              "This a beautiful women classic jacket for you daily casual look and a party time"),
+        ),
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: ElevatedButton(
+            style: ButtonStyle(),
+            onPressed: () {},
+            child: Text("Add To Car"),
+          ),
+        ),
       ],
     );
   }
