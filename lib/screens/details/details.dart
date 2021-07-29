@@ -43,44 +43,85 @@ class DetailsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Expanded(
-              child: Container(
-                color: Colors.red,
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.orange,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Classic Jacket"),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("\$80.00"),
-                        Row(
-                          children: [
-                            Text("Save"),
-                            Icon(Icons.favorite_border_outlined),
-                          ],
-                        )
-                        // ...[
-                        //   Text("Save"),
-                        //   Icon(Icons.favorite_border_outlined),
-                        // ]
-                      ],
+      body: IntrinsicHeight(
+        child: Container(
+            height: (MediaQuery.of(context).size.height -
+                80 -
+                MediaQuery.of(context).padding.top),
+            // constraints: BoxConstraints.expand(),
+            // height: MediaQuery.of(context).size.height,
+            // height: MediaQuery.of(context).size.height -
+            //     (60 - MediaQuery.of(context).padding.top),
+            // width: double.infinity,
+            // height: double.infinity,
+            color: Colors.red,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    color: Colors.blue,
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    // height: MediaQuery.of(context).size.height * 0.45,
+                    child: AspectRatio(
+                      aspectRatio: 16 / 13,
+                      child: Container(
+                        color: Colors.green,
+                      ),
                     ),
-                    ProductDescription()
-                  ],
-                ),
+                  ),
+                  // Expanded(
+                  //   child: Container(
+                  //     color: Colors.orange[500],
+                  //     child: ProductDescription(),
+                  //   ),
+                  // ),
+                  ProductDescription(),
+                  // Expanded(
+                  //   child: Container(
+                  //     color: Colors.orange[200],
+                  //     child: ProductDescription(),
+                  //   ),
+                  // ),
+                ],
               ),
+            )
+            // child: Column(
+            //   children: [
+            //     Expanded(
+            //       child: Container(
+            //         color: Colors.red,
+            //       ),
+            //     ),
+            //     Expanded(
+            //       child: Container(
+            //         color: Colors.orange,
+            //         child: Column(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           children: [
+            //             Text("Classic Jacket"),
+            //             Row(
+            //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //               children: [
+            //                 Text("\$80.00"),
+            //                 Row(
+            //                   children: [
+            //                     Text("Save"),
+            //                     Icon(Icons.favorite_border_outlined),
+            //                   ],
+            //                 )
+            //               ],
+            //             ),
+            //             ProductDescription()
+            //           ],
+            //         ),
+            //       ),
+            //     ),
+            //   ],
+            //),
+            // ),
+            // ),
             ),
-          ],
-        ),
       ),
     );
   }
@@ -187,6 +228,11 @@ class ProductDescription extends StatelessWidget {
         Container(
           child: Text(
               "This a beautiful women classic jacket for you daily casual look and a party time"),
+        ),
+        Container(
+          color: Colors.white,
+          width: MediaQuery.of(context).size.width,
+          height: 100,
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width,

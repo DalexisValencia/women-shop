@@ -33,7 +33,7 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
       child: BlocBuilder<CategoriesBloc, CategoriesState>(
         builder: (BuildContext context, state) {
           List<ProductsModel> products = state.props[0];
-          print(products);
+          // print(products);
           return products.length == 0
               ? Center(
                   child: Column(
