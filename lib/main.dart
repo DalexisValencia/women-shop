@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:women_shop/screens/details/details.dart';
 import 'package:women_shop/screens/splash/splash.dart';
-import 'package:women_shop/screens/stock/stock.dart';
+// import 'package:women_shop/screens/stock/stock.dart';
 
 void main() {
   runApp(MyApp());
