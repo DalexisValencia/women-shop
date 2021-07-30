@@ -62,7 +62,6 @@ class DetailsScreen extends StatelessWidget {
                     color: Colors.blue,
                     alignment: Alignment.center,
                     width: double.infinity,
-                    // height: MediaQuery.of(context).size.height * 0.45,
                     child: AspectRatio(
                       aspectRatio: 16 / 13,
                       child: Container(
@@ -70,58 +69,10 @@ class DetailsScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Expanded(
-                  //   child: Container(
-                  //     color: Colors.orange[500],
-                  //     child: ProductDescription(),
-                  //   ),
-                  // ),
-                  ProductDescription(),
-                  // Expanded(
-                  //   child: Container(
-                  //     color: Colors.orange[200],
-                  //     child: ProductDescription(),
-                  //   ),
-                  // ),
+                  DetailsDescription(),
                 ],
               ),
-            )
-            // child: Column(
-            //   children: [
-            //     Expanded(
-            //       child: Container(
-            //         color: Colors.red,
-            //       ),
-            //     ),
-            //     Expanded(
-            //       child: Container(
-            //         color: Colors.orange,
-            //         child: Column(
-            //           crossAxisAlignment: CrossAxisAlignment.start,
-            //           children: [
-            //             Text("Classic Jacket"),
-            //             Row(
-            //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //               children: [
-            //                 Text("\$80.00"),
-            //                 Row(
-            //                   children: [
-            //                     Text("Save"),
-            //                     Icon(Icons.favorite_border_outlined),
-            //                   ],
-            //                 )
-            //               ],
-            //             ),
-            //             ProductDescription()
-            //           ],
-            //         ),
-            //       ),
-            //     ),
-            //   ],
-            //),
-            // ),
-            // ),
-            ),
+            )),
       ),
     );
   }
@@ -189,60 +140,303 @@ class ActionsAppBar extends StatelessWidget {
   }
 }
 
-class ProductDescription extends StatelessWidget {
-  const ProductDescription({Key key}) : super(key: key);
+class DetailsDescription extends StatelessWidget {
+  const DetailsDescription({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("Description"),
-            Row(
-              children: [
-                Text("23 Rating"),
-                Icon(Icons.star_rate_rounded),
-                Icon(Icons.star_rate_rounded),
-                Icon(Icons.star_rate_rounded),
-                Icon(Icons.star_rate_rounded),
-                Icon(
-                  Icons.star_rate_rounded,
-                  color: Colors.grey,
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: MediaQuery.of(context).size.width * 0.05,
+        vertical: 30,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Classic Jacket",
+            style: Theme.of(context).textTheme.headline6.copyWith(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.yellow,
                 ),
-              ],
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "\$80.00",
+                style: Theme.of(context).textTheme.headline6.copyWith(
+                      fontWeight: FontWeight.w700,
+                      color: Colors.yellow,
+                      fontSize: 18,
+                    ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    "Save",
+                    style: Theme.of(context).textTheme.headline6.copyWith(
+                          fontWeight: FontWeight.w400,
+                          color: Colors.yellow,
+                          fontSize: 18,
+                        ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Icon(Icons.favorite_border_outlined),
+                ],
+              )
+            ],
+          ),
+          DetailsDescriptionSelector(),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Description",
+                style: Theme.of(context).textTheme.caption.copyWith(
+                      fontWeight: FontWeight.w400,
+                    ),
+              ),
+              Row(
+                children: [
+                  Text(
+                    "23 Ratings",
+                    style: Theme.of(context).textTheme.caption.copyWith(
+                          fontWeight: FontWeight.w400,
+                        ),
+                  ),
+                  SizedBox(width: 8),
+                  Icon(
+                    Icons.star_rate_rounded,
+                    size: 17,
+                  ),
+                  Icon(
+                    Icons.star_rate_rounded,
+                    size: 17,
+                  ),
+                  Icon(
+                    Icons.star_rate_rounded,
+                    size: 17,
+                  ),
+                  Icon(
+                    Icons.star_rate_rounded,
+                    size: 17,
+                  ),
+                  Icon(
+                    Icons.star_rate_rounded,
+                    color: Colors.grey,
+                    size: 17,
+                  ),
+                ],
+              ),
+            ],
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(
+              vertical: MediaQuery.of(context).size.height * 0.02,
             ),
-            // ...[
-            //   Text("23 Rating"),
-            //   ...[
-            //     Icon(Icons.star_rate_rounded),
-            //     Icon(Icons.star_rate_rounded),
-            //     Icon(Icons.star_rate_rounded),
-            //     Icon(Icons.star_rate_rounded),
-            //     Icon(Icons.star_outline_rounded),
-            //   ]
-            // ],
-          ],
-        ),
-        Container(
-          child: Text(
-              "This a beautiful women classic jacket for you daily casual look and a party time"),
-        ),
-        Container(
-          color: Colors.white,
-          width: MediaQuery.of(context).size.width,
-          height: 100,
-        ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width,
-          child: ElevatedButton(
-            style: ButtonStyle(),
-            onPressed: () {},
-            child: Text("Add To Car"),
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  width: 1,
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            child: Text(
+              "This a beautiful women classic jacket for you daily casual look and a party time",
+              style: Theme.of(context).textTheme.bodyText2,
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(
+              vertical: 20,
+            ),
+            width: MediaQuery.of(context).size.width,
+            child: MaterialButton(
+              elevation: 2,
+              color: Colors.grey[850],
+              padding: EdgeInsets.symmetric(
+                vertical: 20,
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(2),
+              ),
+              onPressed: () {},
+              child: Text(
+                "Add To Car",
+                style: Theme.of(context).textTheme.bodyText1.copyWith(
+                      color: Colors.white,
+                    ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DetailsDescriptionSelector extends StatelessWidget {
+  const DetailsDescriptionSelector({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        vertical: 12,
+      ),
+      decoration: BoxDecoration(
+        border: Border(
+          top: BorderSide(
+            color: Colors.black,
+            width: 1,
+          ),
+          bottom: BorderSide(
+            color: Colors.black,
+            width: 1,
           ),
         ),
-      ],
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: DetailsDopDownColor(),
+          ),
+          Expanded(
+            child: DetailsDopDownSize(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DetailsDopDownColor extends StatefulWidget {
+  const DetailsDopDownColor({Key key}) : super(key: key);
+
+  @override
+  DetailsDopDownColorState createState() => DetailsDopDownColorState();
+}
+
+class DetailsDopDownColorState extends State<DetailsDopDownColor> {
+  String dropdownValue = 'blue';
+
+  void _changeProperty(String property) {
+    setState(() {
+      dropdownValue = property;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(
+        top: 7,
+        bottom: 8,
+        right: 12,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(
+            child: Text("Color"),
+          ),
+          DropdownButton<String>(
+            underline: SizedBox(),
+            icon: SizedBox(),
+            value: dropdownValue,
+            items: ['blue', 'magenta', 'pink']
+                .map(
+                  (e) => DropdownMenuItem(
+                    value: e,
+                    child: Text(
+                      e,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                )
+                .toList(),
+            onChanged: (val) {
+              _changeProperty(val);
+            },
+          ),
+        ],
+      ),
+    );
+    ;
+  }
+}
+
+class DetailsDopDownSize extends StatefulWidget {
+  const DetailsDopDownSize({Key key}) : super(key: key);
+
+  @override
+  DetailsDopDownSizeState createState() => DetailsDopDownSizeState();
+}
+
+class DetailsDopDownSizeState extends State<DetailsDopDownSize> {
+  String dropdownValue = 'Size';
+
+  void _changeProperty(String property) {
+    setState(() {
+      dropdownValue = property;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(
+        top: 8,
+        bottom: 8,
+        left: 15,
+      ),
+      decoration: BoxDecoration(
+        border: Border(
+          left: BorderSide(
+            color: Colors.black,
+            width: 1,
+          ),
+        ),
+        // color: Colors.blue,
+      ),
+      child: DropdownButton<String>(
+        isExpanded: true,
+        underline: SizedBox(),
+        icon: Container(
+          margin: EdgeInsets.only(
+            left: 3,
+          ),
+          child: Icon(
+            Icons.arrow_drop_down_rounded,
+            color: Colors.black,
+          ),
+        ),
+        value: dropdownValue,
+        items: ['Size', 'S', 'M', 'L', 'XL']
+            .map(
+              (e) => DropdownMenuItem(
+                value: e,
+                child: Text(
+                  e,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            )
+            .toList(),
+        onChanged: (val) {
+          _changeProperty(val);
+        },
+      ),
     );
   }
 }
