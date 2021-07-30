@@ -32,26 +32,31 @@ class _DetailsCarouselSliderWrapperState
           CarouselSlider(
             carouselController: carouselController,
             options: CarouselOptions(
-                aspectRatio: 16 / 13,
-                viewportFraction: 1.1,
-                onPageChanged: (index, reason) {
-                  _changeIndex(index);
-                }),
-            items: slidersItems.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(color: Colors.amber),
-                    child: Text(
-                      'text $i',
-                      style: TextStyle(fontSize: 16.0),
-                    ),
-                  );
-                },
-              );
-            }).toList(),
+              aspectRatio: 16 / 13,
+              viewportFraction: 1.1,
+              onPageChanged: (index, reason) {
+                _changeIndex(index);
+              },
+            ),
+            items: slidersItems.map(
+              (i) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return i != 3
+                        ? Container(
+                            width: MediaQuery.of(context).size.width,
+                            // margin: EdgeInsets.symmetric(horizontal: 5.0),
+                            decoration: BoxDecoration(color: Colors.amber),
+                            child: Text(
+                              'text $i',
+                              style: TextStyle(fontSize: 16.0),
+                            ),
+                          )
+                        : DescriptionCarouselVideo();
+                  },
+                );
+              },
+            ).toList(),
           ),
           Positioned(
             bottom: 10,
@@ -76,6 +81,69 @@ class _DetailsCarouselSliderWrapperState
           ),
         ],
       ),
+    );
+  }
+}
+
+class DescriptionCarouselVideo extends StatefulWidget {
+  const DescriptionCarouselVideo({Key key}) : super(key: key);
+
+  @override
+  _DescriptionCarouselVideoState createState() =>
+      _DescriptionCarouselVideoState();
+}
+
+class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      color: Colors.red,
+      child: Stack(
+        children: [
+          Container(
+            color: Colors.amber[900],
+          ),
+          Positioned(
+            bottom: 5,
+            right: 15,
+            child: Visibility(
+              visible: true,
+              child: MaterialButton(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                  side: BorderSide(
+                    color: Colors.white,
+                    width: 1,
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      "Play",
+                      style: Theme.of(context).textTheme.bodyText2.copyWith(
+                            color: Colors.white,
+                          ),
+                    ),
+                    SizedBox(width: 5),
+                    Icon(
+                      Icons.play_arrow,
+                      size: 18,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                onPressed: () {},
+              ),
+            ),
+          )
+        ],
+      ),
+      // child: Text(
+      //   'esto es un video',
+      //   style: TextStyle(fontSize: 16.0),
+      // ),
     );
   }
 }
