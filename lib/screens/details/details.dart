@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/constants/conts.dart';
+import 'package:women_shop/screens/details/carousel/description_carouselWrapper.dart';
 import 'package:women_shop/screens/details/description/details_description.dart';
 import 'package:women_shop/screens/details/details__actionsAppBar.dart';
 
@@ -56,21 +57,20 @@ class DetailsScreen extends StatelessWidget {
             //     (60 - MediaQuery.of(context).padding.top),
             // width: double.infinity,
             // height: double.infinity,
-            color: Colors.red,
+            // color: Colors.red,
             child: SingleChildScrollView(
               child: Column(
                 children: [
                   Container(
-                    color: Colors.blue,
-                    alignment: Alignment.center,
-                    width: double.infinity,
-                    child: AspectRatio(
-                      aspectRatio: 16 / 13,
-                      child: Container(
-                        color: Colors.green,
+                      color: Colors.blue,
+                      alignment: Alignment.center,
+                      width: double.infinity,
+                      child: DetailsCarouselSliderWrapper()
+                      // child: AspectRatio(
+                      //   aspectRatio: 16 / 13,
+                      //   child: DetailsCarouselSliderWrapper(),
+                      // ),
                       ),
-                    ),
-                  ),
                   DetailsDescription(),
                 ],
               ),

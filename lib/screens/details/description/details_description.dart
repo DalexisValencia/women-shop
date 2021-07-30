@@ -10,7 +10,7 @@ class DetailsDescription extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: MediaQuery.of(context).size.width * 0.05,
-        vertical: 30,
+        vertical: 20,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,11 +19,8 @@ class DetailsDescription extends StatelessWidget {
             "Classic Jacket",
             style: Theme.of(context).textTheme.headline6.copyWith(
                   fontWeight: FontWeight.w700,
-                  color: Colors.yellow,
+                  color: Colors.black,
                 ),
-          ),
-          SizedBox(
-            height: 8,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,31 +29,34 @@ class DetailsDescription extends StatelessWidget {
                 "\$80.00",
                 style: Theme.of(context).textTheme.headline6.copyWith(
                       fontWeight: FontWeight.w700,
-                      color: Colors.yellow,
+                      color: Colors.black,
                       fontSize: 18,
                     ),
               ),
-              Row(
-                children: [
-                  Text(
-                    "Save",
-                    style: Theme.of(context).textTheme.headline6.copyWith(
-                          fontWeight: FontWeight.w400,
-                          color: Colors.yellow,
-                          fontSize: 18,
-                        ),
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Icon(Icons.favorite_border_outlined),
-                ],
-              )
+              MaterialButton(
+                child: Row(
+                  children: [
+                    Text(
+                      "Save",
+                      style: Theme.of(context).textTheme.headline6.copyWith(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                            fontSize: 17,
+                          ),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Icon(Icons.favorite_border_outlined),
+                  ],
+                ),
+                onPressed: () {},
+              ),
             ],
           ),
           DetailsDescriptionSelector(),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.015,
+            height: 12,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -115,12 +115,15 @@ class DetailsDescription extends StatelessWidget {
             ),
             child: Text(
               "This a beautiful women classic jacket for you daily casual look and a party time",
-              style: Theme.of(context).textTheme.bodyText2,
+              style: Theme.of(context).textTheme.bodyText2.copyWith(
+                    color: Colors.black,
+                    fontSize: 13.6,
+                  ),
             ),
           ),
           Container(
             margin: EdgeInsets.only(
-              top: 20,
+              top: 23,
             ),
             width: MediaQuery.of(context).size.width,
             child: MaterialButton(
