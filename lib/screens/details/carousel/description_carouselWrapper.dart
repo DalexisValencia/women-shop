@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:women_shop/constants/conts.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselDot.dart';
+import 'package:women_shop/screens/details/carousel/description_carouselVideo.dart';
 
 class DetailsCarouselSliderWrapper extends StatefulWidget {
   const DetailsCarouselSliderWrapper({Key key}) : super(key: key);
@@ -81,69 +83,6 @@ class _DetailsCarouselSliderWrapperState
           ),
         ],
       ),
-    );
-  }
-}
-
-class DescriptionCarouselVideo extends StatefulWidget {
-  const DescriptionCarouselVideo({Key key}) : super(key: key);
-
-  @override
-  _DescriptionCarouselVideoState createState() =>
-      _DescriptionCarouselVideoState();
-}
-
-class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      color: Colors.red,
-      child: Stack(
-        children: [
-          Container(
-            color: Colors.amber[900],
-          ),
-          Positioned(
-            bottom: 5,
-            right: 15,
-            child: Visibility(
-              visible: true,
-              child: MaterialButton(
-                padding: EdgeInsets.symmetric(horizontal: 10),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  side: BorderSide(
-                    color: Colors.white,
-                    width: 1,
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Text(
-                      "Play",
-                      style: Theme.of(context).textTheme.bodyText2.copyWith(
-                            color: Colors.white,
-                          ),
-                    ),
-                    SizedBox(width: 5),
-                    Icon(
-                      Icons.play_arrow,
-                      size: 18,
-                      color: Colors.white,
-                    ),
-                  ],
-                ),
-                onPressed: () {},
-              ),
-            ),
-          )
-        ],
-      ),
-      // child: Text(
-      //   'esto es un video',
-      //   style: TextStyle(fontSize: 16.0),
-      // ),
     );
   }
 }
