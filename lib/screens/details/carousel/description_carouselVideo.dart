@@ -14,6 +14,8 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
   VideoPlayerController _controller;
   AnimationController _animationController;
   bool isPlaying = false;
+  Duration compareDurationZero =
+      Duration(hours: 0, minutes: 0, seconds: 0, milliseconds: 0);
 
   @override
   void initState() {
@@ -49,14 +51,16 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
         children: [
           Container(
             color: Colors.black,
-            child: !_controller.value.isPlaying
+            child: !_controller.value.isPlaying &&
+                    (_controller.value.position == compareDurationZero)
                 ? Container(
                     decoration: BoxDecoration(
-                    // image: DecorationImage(
-                    //   image: AssetImage(""),
-                    // ),
-                    color: Colors.amber[500],
-                  ))
+                      // image: DecorationImage(
+                      //   image: AssetImage(""),
+                      // ),
+                      color: Colors.amber[500],
+                    ),
+                  )
                 : _controller.value.isInitialized
                     ? VideoApp(
                         playercontroller: _controller,
@@ -101,7 +105,8 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
                   ],
                 ),
                 onPressed: () {
-                  print(_controller.value.position);
+                  // print(_controller.value.position);
+                  // print(compareDurationZero);
                   if (_controller.value.isPlaying) {
                     _controller.pause();
                   } else {
