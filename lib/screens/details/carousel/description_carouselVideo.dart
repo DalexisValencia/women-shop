@@ -23,6 +23,11 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});
+      })
+      ..addListener(() {
+        if (_controller.value.position == _controller.value.duration) {
+          playing(false);
+        }
       });
     _animationController =
         AnimationController(vsync: this, duration: Duration(milliseconds: 450));
@@ -44,15 +49,23 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
         children: [
           Container(
             color: Colors.black,
-            child: _controller.value.isInitialized
-                ? VideoApp(
-                    playercontroller: _controller,
-                  )
-                : Center(
-                    child: CircularProgressIndicator(
-                      color: Colors.white,
-                    ),
-                  ),
+            child: !_controller.value.isPlaying
+                ? Container(
+                    decoration: BoxDecoration(
+                    // image: DecorationImage(
+                    //   image: AssetImage(""),
+                    // ),
+                    color: Colors.amber[500],
+                  ))
+                : _controller.value.isInitialized
+                    ? VideoApp(
+                        playercontroller: _controller,
+                      )
+                    : Center(
+                        child: CircularProgressIndicator(
+                          color: Colors.white,
+                        ),
+                      ),
           ),
           Positioned(
             bottom: 5,
@@ -88,6 +101,7 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
                   ],
                 ),
                 onPressed: () {
+                  print(_controller.value.position);
                   if (_controller.value.isPlaying) {
                     _controller.pause();
                   } else {
