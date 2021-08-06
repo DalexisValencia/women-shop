@@ -80,7 +80,16 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
                       // image: DecorationImage(
                       //   image: AssetImage(""),
                       // ),
-                      color: Colors.amber[500],
+                      color: Colors.black,
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Preview Image',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   )
                 : _controller.value.isInitialized

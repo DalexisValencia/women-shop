@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:women_shop/constants/conts.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselDot.dart';
+import 'package:women_shop/screens/details/carousel/description_carouselImage.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselVideo.dart';
 
 class DetailsCarouselSliderWrapper extends StatefulWidget {
@@ -45,15 +46,7 @@ class _DetailsCarouselSliderWrapperState
                 return Builder(
                   builder: (BuildContext context) {
                     return i != 3
-                        ? Container(
-                            width: MediaQuery.of(context).size.width,
-                            // margin: EdgeInsets.symmetric(horizontal: 5.0),
-                            decoration: BoxDecoration(color: Colors.amber),
-                            child: Text(
-                              'text $i',
-                              style: TextStyle(fontSize: 16.0),
-                            ),
-                          )
+                        ? DescriptionCarouselImg(index: i)
                         : DescriptionCarouselVideo();
                   },
                 );
