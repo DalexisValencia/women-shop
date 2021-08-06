@@ -14,7 +14,7 @@ class DetailsScreen extends StatelessWidget {
         preferredSize: const Size.fromHeight(80.0),
         child: Container(
           height: 60,
-          color: Colors.orange,
+          color: Colors.white,
           padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width * pHorizontally,
           ),
@@ -28,7 +28,6 @@ class DetailsScreen extends StatelessWidget {
               Container(
                 width: 45,
                 height: 45,
-                // color: Colors.red,
                 child: MaterialButton(
                   splashColor: Colors.red,
                   onPressed: () {},
@@ -62,15 +61,11 @@ class DetailsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                      color: Colors.blue,
-                      alignment: Alignment.center,
-                      width: double.infinity,
-                      child: DetailsCarouselSliderWrapper()
-                      // child: AspectRatio(
-                      //   aspectRatio: 16 / 13,
-                      //   child: DetailsCarouselSliderWrapper(),
-                      // ),
-                      ),
+                    // color: Colors.black,
+                    alignment: Alignment.center,
+                    width: double.infinity,
+                    child: DetailsCarouselSliderWrapper(),
+                  ),
                   DetailsDescription(),
                 ],
               ),

@@ -24,15 +24,33 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
         'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4')
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
-        setState(() {});
+        setState(() {
+          isPlaying = false;
+        });
       })
       ..addListener(() {
-        if (_controller.value.position == _controller.value.duration) {
+        // false when the time current and time total are in the zero position and isn't playing
+        if (_controller.value.position == compareDurationZero &&
+            !_controller.value.isPlaying) {
+          playing(false);
+        }
+        // false when the time current and total duration are the same and ins't playing
+        if (_controller.value.position == _controller.value.duration &&
+            !_controller.value.isPlaying) {
+          playing(false);
+        }
+
+        //change state playing when is playing and state 'isplaying' is false (once) ex: play
+        if (_controller.value.isPlaying && !isPlaying) {
+          playing(true);
+        }
+        //change state playing when is playing and state 'isplaying' is true (once) ex: pause
+        if (!_controller.value.isPlaying && isPlaying) {
           playing(false);
         }
       });
     _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 450));
+        AnimationController(vsync: this, duration: Duration(milliseconds: 250));
   }
 
   void playing(bool isplaying) {
@@ -89,6 +107,12 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
                 ),
                 child: Row(
                   children: [
+                    // Text(
+                    //   isPlaying.toString(),
+                    //   style: TextStyle(
+                    //     color: Colors.white,
+                    //   ),
+                    // ),
                     Text(
                       !isPlaying ? "Play" : "Pause",
                       style: Theme.of(context).textTheme.bodyText2.copyWith(
@@ -105,14 +129,9 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
                   ],
                 ),
                 onPressed: () {
-                  // print(_controller.value.position);
-                  // print(compareDurationZero);
-                  if (_controller.value.isPlaying) {
-                    _controller.pause();
-                  } else {
-                    _controller.play();
-                  }
-                  playing(_controller.value.isPlaying);
+                  _controller.value.isPlaying
+                      ? _controller.pause()
+                      : _controller.play();
                 },
               ),
             ),
