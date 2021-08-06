@@ -14,8 +14,12 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
   VideoPlayerController _controller;
   AnimationController _animationController;
   bool isPlaying = false;
-  Duration compareDurationZero =
-      Duration(hours: 0, minutes: 0, seconds: 0, milliseconds: 0);
+  Duration compareDurationZero = Duration(
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+    milliseconds: 0,
+  );
 
   @override
   void initState() {
