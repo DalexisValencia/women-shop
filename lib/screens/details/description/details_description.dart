@@ -122,6 +122,16 @@ class DetailsDescription extends StatelessWidget {
             ),
           ),
           Container(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.4),
+                  spreadRadius: 3,
+                  blurRadius: 10,
+                  offset: Offset(3, 6), // changes position of shadow
+                ),
+              ],
+            ),
             margin: EdgeInsets.only(
               top: 23,
             ),
