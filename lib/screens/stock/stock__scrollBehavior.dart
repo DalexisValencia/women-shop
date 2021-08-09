@@ -1,8 +1,10 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:women_shop/bloc/categories_bloc.dart';
 import 'package:women_shop/constants/conts.dart';
 import 'package:women_shop/models/productsModel.dart';
+import 'package:women_shop/screens/details/details.dart';
 
 class ScrollBehaviorWidget extends StatefulWidget {
   const ScrollBehaviorWidget({
@@ -71,10 +73,39 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
                   //   10,
                   //   (index) => ProductCard(),
                   // ),
-                  children: products.map((item) => ProductCard()).toList(),
+                  children: products
+                      .map(
+                        (item) => OpenContainerProductCard(),
+                      )
+                      .toList(),
                 );
         },
       ),
+    );
+  }
+}
+
+class OpenContainerProductCard extends StatelessWidget {
+  const OpenContainerProductCard({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return OpenContainer(
+      transitionType: ContainerTransitionType.fade,
+      transitionDuration: Duration(
+        milliseconds: 500,
+      ),
+      closedColor: Colors.white, // Colors.red
+      openColor: Colors.white,
+      closedElevation: 0,
+      openElevation: 0,
+      closedBuilder: (_, openContainer) {
+        return ProductCard();
+      },
+      openBuilder: (_, closeContainer) {
+        // closeContainer used this to close container
+        return DetailsScreen();
+      },
     );
   }
 }
