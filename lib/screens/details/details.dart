@@ -5,7 +5,11 @@ import 'package:women_shop/screens/details/description/details_description.dart'
 import 'package:women_shop/screens/details/details__actionsAppBar.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({Key key}) : super(key: key);
+  final Function close;
+  const DetailsScreen({
+    Key key,
+    this.close,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +34,7 @@ class DetailsScreen extends StatelessWidget {
                 height: 45,
                 child: MaterialButton(
                   splashColor: Colors.red,
-                  onPressed: () {},
+                  onPressed: () => close(),
                   color: Colors.transparent,
                   elevation: 0,
                   child: const Icon(Icons.arrow_back),

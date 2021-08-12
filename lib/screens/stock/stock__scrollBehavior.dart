@@ -104,7 +104,9 @@ class OpenContainerProductCard extends StatelessWidget {
       },
       openBuilder: (_, closeContainer) {
         // closeContainer used this to close container
-        return DetailsScreen();
+        return DetailsScreen(
+          close: closeContainer,
+        );
       },
     );
   }

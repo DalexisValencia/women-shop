@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-// import 'package:women_shop/screens/details/details.dart';
 import 'package:women_shop/screens/splash/splash.dart';
 import 'package:women_shop/screens/stock/stock.dart';
 
@@ -19,7 +18,6 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      // home: MyHomePage(title: 'Flutter Demo Home Page'),
       home: MainScreen(),
     );
   }
@@ -46,7 +44,6 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return splashScreen ? SplashScreen() : StockScreen(); // StockScreen();
-    // return SplashScreen();
+    return splashScreen ? SplashScreen() : StockScreen();
   }
 }
