@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/screens/details/description/dropdown/description_dropdownWrapper.dart';
 // import 'package:women_shop/constants/conts.dart';
 
 class DetailsDescription extends StatelessWidget {
-  const DetailsDescription({Key key}) : super(key: key);
+  final ProductsModel product;
+  const DetailsDescription({
+    Key key,
+    this.product,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,8 @@ class DetailsDescription extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Classic Jacket",
+            product.name,
+            // "Classic Jacket",
             style: Theme.of(context).textTheme.headline6.copyWith(
                   fontWeight: FontWeight.w700,
                   color: Colors.black,
@@ -26,7 +32,8 @@ class DetailsDescription extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "\$80.00",
+                "\$${product.price}",
+                // "\$80.00",
                 style: Theme.of(context).textTheme.headline6.copyWith(
                       fontWeight: FontWeight.w700,
                       color: Colors.black,
@@ -76,27 +83,47 @@ class DetailsDescription extends StatelessWidget {
                         ),
                   ),
                   SizedBox(width: 8),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    size: 17,
+                  Builder(
+                    builder: (BuildContext context) {
+                      // print(".....");
+                      // print(product.rating);
+                      List<Widget> starts = [];
+                      for (var i = 0; i < 5; i++) {
+                        starts.add(
+                          Icon(
+                            Icons.star_rate_rounded,
+                            size: 17,
+                            color:
+                                i < product.rating ? Colors.black : Colors.grey,
+                          ),
+                        );
+                      }
+                      return Row(
+                        children: starts,
+                      );
+                    },
                   ),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    size: 17,
-                  ),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    size: 17,
-                  ),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    size: 17,
-                  ),
-                  Icon(
-                    Icons.star_rate_rounded,
-                    color: Colors.grey,
-                    size: 17,
-                  ),
+                  // Icon(
+                  //   Icons.star_rate_rounded,
+                  //   size: 17,
+                  // ),
+                  // Icon(
+                  //   Icons.star_rate_rounded,
+                  //   size: 17,
+                  // ),
+                  // Icon(
+                  //   Icons.star_rate_rounded,
+                  //   size: 17,
+                  // ),
+                  // Icon(
+                  //   Icons.star_rate_rounded,
+                  //   size: 17,
+                  // ),
+                  // Icon(
+                  //   Icons.star_rate_rounded,
+                  //   color: Colors.grey,
+                  //   size: 17,
+                  // ),
                 ],
               ),
             ],
@@ -114,7 +141,8 @@ class DetailsDescription extends StatelessWidget {
               ),
             ),
             child: Text(
-              "This a beautiful women classic jacket for you daily casual look and a party time",
+              product.description,
+              // "This a beautiful women classic jacket for you daily casual look and a party time",
               style: Theme.of(context).textTheme.bodyText2.copyWith(
                     color: Colors.black,
                     fontSize: 13.6,

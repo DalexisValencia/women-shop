@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/constants/conts.dart';
+import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselWrapper.dart';
 import 'package:women_shop/screens/details/description/details_description.dart';
 import 'package:women_shop/screens/details/details__actionsAppBar.dart';
 
 class DetailsScreen extends StatelessWidget {
   final Function close;
+  final ProductsModel product;
   const DetailsScreen({
     Key key,
     this.close,
+    this.product,
   }) : super(key: key);
 
   @override
@@ -70,7 +73,9 @@ class DetailsScreen extends StatelessWidget {
                     width: double.infinity,
                     child: DetailsCarouselSliderWrapper(),
                   ),
-                  DetailsDescription(),
+                  DetailsDescription(
+                    product: product,
+                  ),
                 ],
               ),
             )),

@@ -75,7 +75,9 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
                   // ),
                   children: products
                       .map(
-                        (item) => OpenContainerProductCard(),
+                        (item) => OpenContainerProductCard(
+                          product: item,
+                        ),
                       )
                       .toList(),
                 );
@@ -86,7 +88,11 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
 }
 
 class OpenContainerProductCard extends StatelessWidget {
-  const OpenContainerProductCard({Key key}) : super(key: key);
+  final ProductsModel product;
+  const OpenContainerProductCard({
+    Key key,
+    this.product,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -106,6 +112,7 @@ class OpenContainerProductCard extends StatelessWidget {
         // closeContainer used this to close container
         return DetailsScreen(
           close: closeContainer,
+          product: product,
         );
       },
     );

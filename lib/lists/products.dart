@@ -59,7 +59,7 @@ List<ProductsModel> products = [
         url: '',
       )
     ],
-    rating: 4,
+    rating: 3,
     colors: [
       'Black',
       'Black red',
@@ -93,7 +93,7 @@ List<ProductsModel> products = [
         url: '',
       ),
     ],
-    rating: 4,
+    rating: 2,
     colors: [
       'black',
       'white',
@@ -134,7 +134,7 @@ List<ProductsModel> products = [
   ),
   ProductsModel(
     name: 'Long fitted shirt',
-    type: categories[1],
+    type: categories[4],
     image: '',
     loadedColor: Colors.blue,
     price: '70.00',
@@ -158,7 +158,7 @@ List<ProductsModel> products = [
         url: '',
       ),
     ],
-    rating: 4,
+    rating: 3,
     colors: [
       'Yellow',
       'Pink',

@@ -9,7 +9,7 @@ class ProductsModel {
   final String price;
   final String description;
   final List<ProductGallery> gallery;
-  final double rating;
+  final int rating;
   final List<String> colors;
   ProductsModel({
     this.name,
