@@ -9,6 +9,29 @@ List<ProductsModel> products = [
     image: '',
     loadedColor: Colors.red,
     price: '50.00',
+    description:
+        'This a beautiful women classic jacket for you daily casual look and a party time',
+    gallery: [
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'video',
+        url: '',
+      )
+    ],
+    rating: 4,
+    colors: [
+      'Red',
+      'Blue',
+      'Alice blue',
+      'Purple',
+    ],
   ),
   ProductsModel(
     name: 'Crop Wrap tee',
@@ -16,6 +39,33 @@ List<ProductsModel> products = [
     image: '',
     loadedColor: Colors.blue,
     price: '80.00',
+    description:
+        'This a beautiful women classic jacket for you daily casual look and a party time, second',
+    gallery: [
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'video',
+        url: '',
+      )
+    ],
+    rating: 4,
+    colors: [
+      'Black',
+      'Black red',
+      'Black blue',
+      'Black green',
+    ],
   ),
   ProductsModel(
     name: 'Short Sleeve Top',
@@ -23,6 +73,31 @@ List<ProductsModel> products = [
     image: '',
     loadedColor: Colors.blue,
     price: '50.00',
+    description:
+        'This a beautiful women classic jacket for you daily casual look and a party time, third',
+    gallery: [
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'video',
+        url: '',
+      ),
+    ],
+    rating: 4,
+    colors: [
+      'black',
+      'white',
+    ],
   ),
   ProductsModel(
     name: 'Long fitted shirt',
@@ -30,5 +105,64 @@ List<ProductsModel> products = [
     image: '',
     loadedColor: Colors.blue,
     price: '70.00',
+    description:
+        'This a beautiful women classic jacket for you daily casual look and a party time, fourth',
+    gallery: [
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'video',
+        url: '',
+      ),
+    ],
+    rating: 4,
+    colors: [
+      'Yellow',
+      'Pink',
+      'Green',
+    ],
+  ),
+  ProductsModel(
+    name: 'Long fitted shirt',
+    type: categories[1],
+    image: '',
+    loadedColor: Colors.blue,
+    price: '70.00',
+    description:
+        'This a beautiful women classic jacket for you daily casual look and a party time, fourth',
+    gallery: [
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'img',
+        url: '',
+      ),
+      ProductGallery(
+        type: 'video',
+        url: '',
+      ),
+    ],
+    rating: 4,
+    colors: [
+      'Yellow',
+      'Pink',
+      'Green',
+    ],
   ),
 ];
