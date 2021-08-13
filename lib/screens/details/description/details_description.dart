@@ -103,27 +103,6 @@ class DetailsDescription extends StatelessWidget {
                       );
                     },
                   ),
-                  // Icon(
-                  //   Icons.star_rate_rounded,
-                  //   size: 17,
-                  // ),
-                  // Icon(
-                  //   Icons.star_rate_rounded,
-                  //   size: 17,
-                  // ),
-                  // Icon(
-                  //   Icons.star_rate_rounded,
-                  //   size: 17,
-                  // ),
-                  // Icon(
-                  //   Icons.star_rate_rounded,
-                  //   size: 17,
-                  // ),
-                  // Icon(
-                  //   Icons.star_rate_rounded,
-                  //   color: Colors.grey,
-                  //   size: 17,
-                  // ),
                 ],
               ),
             ],
