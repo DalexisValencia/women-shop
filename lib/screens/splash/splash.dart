@@ -7,25 +7,33 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      color: Colors.blue,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CircularProgressIndicator(
-              backgroundColor: Colors.red,
-              valueColor: new AlwaysStoppedAnimation<Color>(Colors.black),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text("Cargando..")
-          ],
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        color: Colors.white,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircularProgressIndicator(
+                backgroundColor: Colors.grey[900],
+                valueColor: new AlwaysStoppedAnimation<Color>(
+                  Colors.grey[400],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Cargando..",
+                style: Theme.of(context).textTheme.bodyText1.copyWith(
+                      color: Colors.grey[900],
+                    ),
+              )
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }
