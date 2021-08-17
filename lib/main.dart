@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        accentColor: Colors.black,
       ),
       debugShowCheckedModeBanner: false,
       home: MainScreen(),

@@ -17,7 +17,7 @@ class _StockFilterState extends State<StockFilter> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: Duration(
-        milliseconds: 500,
+        milliseconds: 200,
       ),
       decoration: BoxDecoration(
         border: Border(
