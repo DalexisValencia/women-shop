@@ -1,10 +1,9 @@
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:women_shop/bloc/categories_bloc.dart';
 import 'package:women_shop/constants/conts.dart';
 import 'package:women_shop/models/productsModel.dart';
-import 'package:women_shop/screens/details/details.dart';
+import 'package:women_shop/screens/stock/product/product__openContainer.dart';
 
 class ScrollBehaviorWidget extends StatefulWidget {
   const ScrollBehaviorWidget({
@@ -82,98 +81,6 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
                       .toList(),
                 );
         },
-      ),
-    );
-  }
-}
-
-class OpenContainerProductCard extends StatelessWidget {
-  final ProductsModel product;
-  const OpenContainerProductCard({
-    Key key,
-    this.product,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return OpenContainer(
-      transitionType: ContainerTransitionType.fade,
-      transitionDuration: Duration(
-        milliseconds: 500,
-      ),
-      closedColor: Colors.white, // Colors.red
-      openColor: Colors.white,
-      closedElevation: 0,
-      openElevation: 0,
-      closedBuilder: (_, openContainer) {
-        return ProductCard();
-      },
-      openBuilder: (_, closeContainer) {
-        // closeContainer used this to close container
-        return DetailsScreen(
-          close: closeContainer,
-          product: product,
-        );
-      },
-    );
-  }
-}
-
-class ProductCard extends StatelessWidget {
-  const ProductCard({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.grey[400],
-              ),
-              child: Center(
-                child: Text("card"),
-              ),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(
-              top: 5,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Fashion Label",
-                  style: Theme.of(context).textTheme.caption,
-                ),
-                Text(
-                  "name",
-                  style: Theme.of(context).textTheme.bodyText1.copyWith(
-                        fontWeight: FontWeight.w500,
-                      ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "\$ 50.00",
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    Icon(
-                      Icons.favorite_border,
-                      color: Colors.grey,
-                      size: 18,
-                    )
-                  ],
-                )
-              ],
-            ),
-          )
-        ],
       ),
     );
   }

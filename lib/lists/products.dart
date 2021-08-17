@@ -14,14 +14,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'video',
+        thumbnail: '',
         url: '',
       )
     ],
@@ -48,14 +51,17 @@ List<ProductsModel> products = [
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'video',
+        thumbnail: '',
         url: '',
       )
     ],
@@ -78,18 +84,22 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'video',
+        thumbnail: '',
         url: '',
       ),
     ],
@@ -110,18 +120,22 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'video',
+        thumbnail: '',
         url: '',
       ),
     ],
@@ -147,14 +161,17 @@ List<ProductsModel> products = [
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'img',
+        thumbnail: '',
         url: '',
       ),
       ProductGallery(
         type: 'video',
+        thumbnail: '',
         url: '',
       ),
     ],

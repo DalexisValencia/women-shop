@@ -26,10 +26,12 @@ class ProductsModel {
 
 class ProductGallery {
   final String type;
+  final String thumbnail;
   final String url;
 
   ProductGallery({
     this.type,
+    this.thumbnail,
     this.url,
   });
 }
