@@ -21,7 +21,7 @@ class DetailsCarouselSliderWrapper extends StatefulWidget {
 
 class _DetailsCarouselSliderWrapperState
     extends State<DetailsCarouselSliderWrapper> {
-  List<int> slidersItems = [1, 2, 3, 4, 5];
+  // List<int> slidersItems = [1, 2, 3, 4, 5];
   CarouselController carouselController = CarouselController();
   int currentIndex = 0;
 
@@ -33,8 +33,6 @@ class _DetailsCarouselSliderWrapperState
 
   @override
   Widget build(BuildContext context) {
-    print("-....-");
-    print(widget.gallery);
     return Container(
       // color: Colors.green,
       child: Stack(
@@ -70,7 +68,7 @@ class _DetailsCarouselSliderWrapperState
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: slidersItems.asMap().entries.map(
+                children: widget.gallery.asMap().entries.map(
                   (e) {
                     return DetailsCarouselSliderDot(
                       slider: e.value,
