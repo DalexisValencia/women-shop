@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:women_shop/models/productsModel.dart';
 
 class DescriptionCarouselImg extends StatelessWidget {
-  final int index;
-  const DescriptionCarouselImg({Key key, this.index}) : super(key: key);
+  final ProductGallery item;
+  const DescriptionCarouselImg({Key key, this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class DescriptionCarouselImg extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          'Carousel $index',
+          'Carousel 1',
           style: TextStyle(
             fontSize: 16.0,
             color: Colors.white,

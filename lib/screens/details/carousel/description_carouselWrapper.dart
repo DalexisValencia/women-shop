@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:women_shop/constants/conts.dart';
+import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselDot.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselImage.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselVideo.dart';
 
 class DetailsCarouselSliderWrapper extends StatefulWidget {
-  const DetailsCarouselSliderWrapper({Key key}) : super(key: key);
+  final List<ProductGallery> gallery;
+  const DetailsCarouselSliderWrapper({
+    Key key,
+    this.gallery,
+  }) : super(key: key);
 
   @override
   _DetailsCarouselSliderWrapperState createState() =>
@@ -28,6 +33,8 @@ class _DetailsCarouselSliderWrapperState
 
   @override
   Widget build(BuildContext context) {
+    print("-....-");
+    print(widget.gallery);
     return Container(
       // color: Colors.green,
       child: Stack(
@@ -41,13 +48,13 @@ class _DetailsCarouselSliderWrapperState
                 _changeIndex(index);
               },
             ),
-            items: slidersItems.map(
+            items: widget.gallery.map(
               (i) {
                 return Builder(
                   builder: (BuildContext context) {
-                    return i != 3
-                        ? DescriptionCarouselImg(index: i)
-                        : DescriptionCarouselVideo();
+                    return i.type == 'img'
+                        ? DescriptionCarouselImg(item: i)
+                        : DescriptionCarouselVideo(item: i);
                   },
                 );
               },

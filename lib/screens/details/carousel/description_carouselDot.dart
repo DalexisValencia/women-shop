@@ -34,7 +34,7 @@ class DetailsCarouselSliderDot extends StatelessWidget {
         ),
       ),
       onTap: () {
-        print("a darle");
+        // print("a darle");
       },
     );
   }

@@ -71,7 +71,9 @@ class DetailsScreen extends StatelessWidget {
                     // color: Colors.black,
                     alignment: Alignment.center,
                     width: double.infinity,
-                    child: DetailsCarouselSliderWrapper(),
+                    child: DetailsCarouselSliderWrapper(
+                      gallery: product.gallery,
+                    ),
                   ),
                   DetailsDescription(
                     product: product,

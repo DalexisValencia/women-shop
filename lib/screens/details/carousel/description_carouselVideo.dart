@@ -1,8 +1,10 @@
 import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
+import 'package:women_shop/models/productsModel.dart';
 
 class DescriptionCarouselVideo extends StatefulWidget {
-  const DescriptionCarouselVideo({Key key}) : super(key: key);
+  final ProductGallery item;
+  const DescriptionCarouselVideo({Key key, this.item}) : super(key: key);
 
   @override
   _DescriptionCarouselVideoState createState() =>
@@ -25,7 +27,9 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
   void initState() {
     super.initState();
     _controller = VideoPlayerController.network(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4')
+      widget.item.url,
+      // 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    )
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {

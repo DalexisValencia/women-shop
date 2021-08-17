@@ -25,7 +25,8 @@ List<ProductsModel> products = [
       ProductGallery(
         type: 'video',
         thumbnail: '',
-        url: '',
+        url:
+            'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       )
     ],
     rating: 4,
@@ -62,7 +63,8 @@ List<ProductsModel> products = [
       ProductGallery(
         type: 'video',
         thumbnail: '',
-        url: '',
+        url:
+            'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       )
     ],
     rating: 3,
@@ -100,7 +102,8 @@ List<ProductsModel> products = [
       ProductGallery(
         type: 'video',
         thumbnail: '',
-        url: '',
+        url:
+            'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
     ],
     rating: 2,
@@ -136,7 +139,8 @@ List<ProductsModel> products = [
       ProductGallery(
         type: 'video',
         thumbnail: '',
-        url: '',
+        url:
+            'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
     ],
     rating: 4,
@@ -172,7 +176,8 @@ List<ProductsModel> products = [
       ProductGallery(
         type: 'video',
         thumbnail: '',
-        url: '',
+        url:
+            'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
     ],
     rating: 3,
