@@ -18,7 +18,7 @@ class OpenContainerProductCard extends StatelessWidget {
       transitionDuration: Duration(
         milliseconds: 500,
       ),
-      closedColor: Colors.white, // Colors.red
+      closedColor: Colors.white,
       openColor: Colors.white,
       closedElevation: 0,
       openElevation: 0,

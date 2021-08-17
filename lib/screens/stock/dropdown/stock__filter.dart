@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:women_shop/screens/stock/stock__dropdown.dart';
+import 'package:women_shop/screens/stock/dropdown/stock__dropdown.dart';
 
 class StockFilter extends StatefulWidget {
   final double height;
