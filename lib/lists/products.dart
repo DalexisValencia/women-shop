@@ -4,7 +4,7 @@ import 'package:women_shop/models/productsModel.dart';
 
 List<ProductsModel> products = [
   ProductsModel(
-    name: 'Slim Fit Shirt',
+    name: 'Slim Fit Shirt with a longer title',
     type: categories[1],
     image: '',
     loadedColor: Colors.red,

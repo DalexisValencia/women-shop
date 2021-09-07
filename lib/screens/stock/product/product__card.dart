@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/models/productsModel.dart';
+import 'package:women_shop/styles/stockCard.dart';
 
 class ProductCard extends StatelessWidget {
   final ProductsModel product;
@@ -33,14 +34,21 @@ class ProductCard extends StatelessWidget {
                 Text(
                   // "Fashion Label",
                   product.type.name,
-                  style: Theme.of(context).textTheme.caption,
+                  style: StockCardTextStyle.cardTag(context),
                 ),
-                Text(
-                  // "name",
-                  product.name,
-                  style: Theme.of(context).textTheme.bodyText1.copyWith(
-                        fontWeight: FontWeight.w500,
-                      ),
+                FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: Text(
+                    // "name",
+                    product.name.length >= 34
+                        ? product.name.replaceRange(
+                            20,
+                            product.name.length,
+                            '...',
+                          )
+                        : product.name,
+                    style: StockCardTextStyle.cardName(context),
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,9 +56,7 @@ class ProductCard extends StatelessWidget {
                     Text(
                       // "\$ 50.00",
                       "\$${product.price}",
-                      style: Theme.of(context).textTheme.bodyText1.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
+                      style: StockCardTextStyle.cardPrice(context),
                     ),
                     Icon(
                       Icons.favorite_border,
