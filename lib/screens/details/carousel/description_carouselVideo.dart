@@ -1,6 +1,7 @@
 import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:women_shop/models/productsModel.dart';
+import 'package:women_shop/styles/detailsText.dart';
 
 class DescriptionCarouselVideo extends StatefulWidget {
   final ProductGallery item;
@@ -72,7 +73,7 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      color: Colors.red,
+      color: Colors.black,
       child: Stack(
         children: [
           Container(
@@ -124,17 +125,14 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
                 ),
                 child: Row(
                   children: [
-                    // Text(
-                    //   isPlaying.toString(),
-                    //   style: TextStyle(
-                    //     color: Colors.white,
-                    //   ),
-                    // ),
-                    Text(
-                      !isPlaying ? "Play" : "Pause",
-                      style: Theme.of(context).textTheme.bodyText2.copyWith(
-                            color: Colors.white,
-                          ),
+                    Container(
+                      margin: EdgeInsets.only(
+                        top: 3,
+                      ),
+                      child: Text(
+                        !isPlaying ? "Play" : "Pause",
+                        style: DetailsTextStyles.playAndPause(context),
+                      ),
                     ),
                     SizedBox(width: 5),
                     AnimatedIcon(

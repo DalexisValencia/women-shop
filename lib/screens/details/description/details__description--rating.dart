@@ -13,7 +13,6 @@ class RatingDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -28,7 +27,6 @@ class RatingDetails extends StatelessWidget {
             ),
           ),
           Container(
-            color: Colors.yellow,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,11 +55,8 @@ class RatingDetails extends StatelessWidget {
                         ),
                       );
                     }
-                    return Container(
-                      color: Colors.blue,
-                      child: Row(
-                        children: starts,
-                      ),
+                    return Row(
+                      children: starts,
                     );
                   },
                 ),

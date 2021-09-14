@@ -85,4 +85,12 @@ class DetailsTextStyles {
           fontFamily: 'Helvetica',
         );
   }
+
+  static playAndPause(context) {
+    return Theme.of(context).textTheme.bodyText2.copyWith(
+          color: Colors.white,
+          fontFamily: 'Helvetica',
+          // fontSize: 16,
+        );
+  }
 }
