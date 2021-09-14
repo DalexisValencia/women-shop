@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/screens/stock/dropdown/stock__dropdown.dart';
+import 'package:women_shop/styles/appBarText.dart';
 
 class StockFilter extends StatefulWidget {
   final double height;
@@ -62,10 +63,7 @@ class _StockFilterState extends State<StockFilter> {
                   child: Text(
                     "Filter",
                     textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.subtitle1.copyWith(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w400,
-                        ),
+                    style: AppBarTextFilter.title(context),
                   ),
                 ),
               ),

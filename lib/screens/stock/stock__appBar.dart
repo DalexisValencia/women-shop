@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/constants/conts.dart';
+import 'package:women_shop/styles/appBarText.dart';
 
 class StockAppBar extends StatelessWidget {
   const StockAppBar({Key key}) : super(key: key);
@@ -43,17 +44,15 @@ class StockAppBar extends StatelessWidget {
                 children: [
                   Text(
                     "Women's Tops",
-                    style: Theme.of(context).textTheme.headline6,
+                    // style: Theme.of(context).textTheme.headline6,
+                    style: AppBarTextStyle.title(context),
                   ),
                   SizedBox(
                     height: 2,
                   ),
                   Text(
                     "480 Items found",
-                    style: Theme.of(context).textTheme.bodyText2.copyWith(
-                          fontWeight: FontWeight.w300,
-                          fontSize: 12,
-                        ),
+                    style: AppBarTextStyle.itemsFound(context),
                   ),
                 ],
               ),

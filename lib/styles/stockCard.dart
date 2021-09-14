@@ -6,6 +6,7 @@ class StockCardTextStyle {
   static TextStyle cardTag(BuildContext context) {
     return Theme.of(context).textTheme.caption.copyWith(
           color: secondaryColor.withOpacity(0.5),
+          fontFamily: 'Helvetica',
         );
   }
 
@@ -23,6 +24,7 @@ class StockCardTextStyle {
           fontWeight: FontWeight.bold,
           fontSize: 13.7,
           color: secondaryColor,
+          fontFamily: 'Helvetica',
         );
   }
 }

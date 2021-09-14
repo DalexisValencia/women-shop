@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:women_shop/bloc/categories_bloc.dart';
 import 'package:women_shop/lists/categories.dart';
+import 'package:women_shop/styles/appBarText.dart';
 
 class DropdownFilter extends StatefulWidget {
   const DropdownFilter({Key key}) : super(key: key);
@@ -36,10 +37,7 @@ class _DropdownFilterState extends State<DropdownFilter> {
           ),
           iconSize: 28,
           elevation: 0,
-          style: Theme.of(context).textTheme.subtitle1.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.w400,
-              ),
+          style: AppBarTextFilter.titleSelection(context),
           onChanged: (String value) {
             categoriesinstance.add(ChangeCategory(value));
             setState(() {
