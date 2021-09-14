@@ -22,12 +22,14 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Text(
                 "Cargando..",
-                style: Theme.of(context).textTheme.bodyText1.copyWith(
+                style: Theme.of(context).textTheme.headline6.copyWith(
                       color: Colors.grey[900],
+                      fontFamily: 'Helvetica',
+                      fontWeight: FontWeight.bold,
                     ),
               )
             ],
