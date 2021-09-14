@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:women_shop/styles/detailsText.dart';
 
 class DetailsDropDownSize extends StatefulWidget {
   const DetailsDropDownSize({Key key}) : super(key: key);
@@ -34,6 +35,7 @@ class DetailsDropDownSizeState extends State<DetailsDropDownSize> {
         // color: Colors.blue,
       ),
       child: DropdownButton<String>(
+        style: DetailsTextStyles.dropDownSize(context),
         isExpanded: true,
         underline: SizedBox(),
         icon: Container(

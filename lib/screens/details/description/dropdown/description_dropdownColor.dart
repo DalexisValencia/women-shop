@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:women_shop/styles/detailsText.dart';
 
 class DetailsDropDownColor extends StatefulWidget {
   const DetailsDropDownColor({Key key}) : super(key: key);
@@ -30,12 +31,13 @@ class DetailsDropDownColorState extends State<DetailsDropDownColor> {
           Expanded(
             child: Text(
               "Color",
-              style: Theme.of(context).textTheme.bodyText2,
+              style: DetailsTextStyles.dropDownColorKey(context),
             ),
           ),
           DropdownButton<String>(
             underline: SizedBox(),
             icon: SizedBox(),
+            style: DetailsTextStyles.dropDownColorVal(context),
             value: dropdownValue,
             items: ['blue', 'magenta', 'pink']
                 .map(

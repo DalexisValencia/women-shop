@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/screens/details/description/dropdown/description_dropdownWrapper.dart';
+import 'package:women_shop/styles/detailsText.dart';
 // import 'package:women_shop/constants/conts.dart';
 
 class DetailsDescription extends StatelessWidget {
@@ -22,34 +23,21 @@ class DetailsDescription extends StatelessWidget {
         children: [
           Text(
             product.name,
-            // "Classic Jacket",
-            style: Theme.of(context).textTheme.headline6.copyWith(
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                ),
+            style: DetailsTextStyles.name(context),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "\$${product.price}",
-                // "\$80.00",
-                style: Theme.of(context).textTheme.headline6.copyWith(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.black,
-                      fontSize: 18,
-                    ),
+                style: DetailsTextStyles.price(context),
               ),
               MaterialButton(
                 child: Row(
                   children: [
                     Text(
                       "Save",
-                      style: Theme.of(context).textTheme.headline6.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black,
-                            fontSize: 17,
-                          ),
+                      style: DetailsTextStyles.addToFav(context),
                     ),
                     SizedBox(
                       width: 8,
@@ -70,23 +58,19 @@ class DetailsDescription extends StatelessWidget {
             children: [
               Text(
                 "Description",
-                style: Theme.of(context).textTheme.caption.copyWith(
-                      fontWeight: FontWeight.w400,
-                    ),
+                style: DetailsTextStyles.descriptionTitle(context),
               ),
               Row(
                 children: [
-                  Text(
-                    "23 Ratings",
-                    style: Theme.of(context).textTheme.caption.copyWith(
-                          fontWeight: FontWeight.w400,
-                        ),
+                  Center(
+                    child: Text(
+                      "23 Ratings",
+                      style: DetailsTextStyles.rating(context),
+                    ),
                   ),
                   SizedBox(width: 8),
                   Builder(
                     builder: (BuildContext context) {
-                      // print(".....");
-                      // print(product.rating);
                       List<Widget> starts = [];
                       for (var i = 0; i < 5; i++) {
                         starts.add(
@@ -122,10 +106,7 @@ class DetailsDescription extends StatelessWidget {
             child: Text(
               product.description,
               // "This a beautiful women classic jacket for you daily casual look and a party time",
-              style: Theme.of(context).textTheme.bodyText2.copyWith(
-                    color: Colors.black,
-                    fontSize: 13.6,
-                  ),
+              style: DetailsTextStyles.description(context),
             ),
           ),
           Container(
@@ -155,9 +136,7 @@ class DetailsDescription extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 "Add To Car",
-                style: Theme.of(context).textTheme.bodyText1.copyWith(
-                      color: Colors.white,
-                    ),
+                style: DetailsTextStyles.addCart(context),
               ),
             ),
           ),
