@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:women_shop/constants/conts.dart';
 import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/screens/details/carousel/description_carouselWrapper.dart';
-import 'package:women_shop/screens/details/description/details_description.dart';
+import 'package:women_shop/screens/details/description/details__description.dart';
 import 'package:women_shop/screens/details/details__actionsAppBar.dart';
 
 class DetailsScreen extends StatelessWidget {

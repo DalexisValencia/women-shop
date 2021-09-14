@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:women_shop/models/productsModel.dart';
+import 'package:women_shop/screens/details/description/details__description--rating.dart';
 import 'package:women_shop/screens/details/description/dropdown/description_dropdownWrapper.dart';
 import 'package:women_shop/styles/detailsText.dart';
 // import 'package:women_shop/constants/conts.dart';
@@ -53,44 +54,7 @@ class DetailsDescription extends StatelessWidget {
           SizedBox(
             height: 12,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Description",
-                style: DetailsTextStyles.descriptionTitle(context),
-              ),
-              Row(
-                children: [
-                  Center(
-                    child: Text(
-                      "23 Ratings",
-                      style: DetailsTextStyles.rating(context),
-                    ),
-                  ),
-                  SizedBox(width: 8),
-                  Builder(
-                    builder: (BuildContext context) {
-                      List<Widget> starts = [];
-                      for (var i = 0; i < 5; i++) {
-                        starts.add(
-                          Icon(
-                            Icons.star_rate_rounded,
-                            size: 17,
-                            color:
-                                i < product.rating ? Colors.black : Colors.grey,
-                          ),
-                        );
-                      }
-                      return Row(
-                        children: starts,
-                      );
-                    },
-                  ),
-                ],
-              ),
-            ],
-          ),
+          RatingDetails(product: product),
           Container(
             padding: EdgeInsets.symmetric(
               vertical: MediaQuery.of(context).size.height * 0.02,

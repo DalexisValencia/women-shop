@@ -72,7 +72,7 @@ class DetailsTextStyles {
   }
 
   static rating(BuildContext context) {
-    return Theme.of(context).textTheme.button.copyWith(
+    return Theme.of(context).textTheme.bodyText1.copyWith(
           fontWeight: FontWeight.w400,
           color: secondaryColor,
           fontFamily: 'Helvetica',
