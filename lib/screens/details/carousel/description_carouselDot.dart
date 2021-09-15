@@ -21,13 +21,14 @@ class DetailsCarouselSliderDot extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
           color: isActive ? Colors.white.withOpacity(0.5) : Colors.transparent,
+          // color: Colors.red,
         ),
         child: Center(
           child: Container(
             width: 5,
             height: 5,
             decoration: BoxDecoration(
-              color: isActive ? Colors.white : Colors.transparent,
+              color: isActive ? Colors.white : Colors.white,
               borderRadius: BorderRadius.circular(50),
             ),
           ),
