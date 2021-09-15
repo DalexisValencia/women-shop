@@ -3,9 +3,9 @@ import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/styles/stockCard.dart';
 
 class ProductCard extends StatelessWidget {
-  final ProductsModel product;
+  final ProductsModel? product;
   const ProductCard({
-    Key key,
+    Key? key,
     this.product,
   }) : super(key: key);
 
@@ -33,20 +33,20 @@ class ProductCard extends StatelessWidget {
               children: [
                 Text(
                   // "Fashion Label",
-                  product.type.name,
+                  product!.type!.name!,
                   style: StockCardTextStyle.cardTag(context),
                 ),
                 FittedBox(
                   fit: BoxFit.fitHeight,
                   child: Text(
                     // "name",
-                    product.name.length >= 34
-                        ? product.name.replaceRange(
+                    product!.name!.length >= 34
+                        ? product!.name!.replaceRange(
                             20,
-                            product.name.length,
+                            product!.name!.length,
                             '...',
                           )
-                        : product.name,
+                        : product!.name!,
                     style: StockCardTextStyle.cardName(context),
                   ),
                 ),
@@ -55,7 +55,7 @@ class ProductCard extends StatelessWidget {
                   children: [
                     Text(
                       // "\$ 50.00",
-                      "\$${product.price}",
+                      "\$${product!.price!}",
                       style: StockCardTextStyle.cardPrice(context),
                     ),
                     Icon(

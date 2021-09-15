@@ -6,10 +6,10 @@ import 'package:women_shop/screens/details/description/details__description.dart
 import 'package:women_shop/screens/details/details__actionsAppBar.dart';
 
 class DetailsScreen extends StatelessWidget {
-  final Function close;
-  final ProductsModel product;
+  final Function? close;
+  final ProductsModel? product;
   const DetailsScreen({
-    Key key,
+    Key? key,
     this.close,
     this.product,
   }) : super(key: key);
@@ -37,7 +37,7 @@ class DetailsScreen extends StatelessWidget {
                 height: 45,
                 child: MaterialButton(
                   splashColor: Colors.red,
-                  onPressed: () => close(),
+                  onPressed: () => close!(),
                   color: Colors.transparent,
                   elevation: 0,
                   child: const Icon(Icons.arrow_back),
@@ -72,7 +72,7 @@ class DetailsScreen extends StatelessWidget {
                     alignment: Alignment.center,
                     width: double.infinity,
                     child: DetailsCarouselSliderWrapper(
-                      gallery: product.gallery,
+                      gallery: product!.gallery,
                     ),
                   ),
                   DetailsDescription(

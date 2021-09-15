@@ -6,9 +6,9 @@ import 'package:women_shop/styles/detailsText.dart';
 // import 'package:women_shop/constants/conts.dart';
 
 class DetailsDescription extends StatelessWidget {
-  final ProductsModel product;
+  final ProductsModel? product;
   const DetailsDescription({
-    Key key,
+    Key? key,
     this.product,
   }) : super(key: key);
 
@@ -23,14 +23,14 @@ class DetailsDescription extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            product.name,
+            product!.name!.toString(),
             style: DetailsTextStyles.name(context),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "\$${product.price}",
+                "\$${product!.price}",
                 style: DetailsTextStyles.price(context),
               ),
               MaterialButton(
@@ -68,7 +68,7 @@ class DetailsDescription extends StatelessWidget {
               ),
             ),
             child: Text(
-              product.description,
+              product!.description.toString(),
               // "This a beautiful women classic jacket for you daily casual look and a party time",
               style: DetailsTextStyles.description(context),
             ),

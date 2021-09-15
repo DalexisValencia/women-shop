@@ -5,9 +5,9 @@ import 'package:women_shop/screens/details/details.dart';
 import 'package:women_shop/screens/stock/product/product__card.dart';
 
 class OpenContainerProductCard extends StatelessWidget {
-  final ProductsModel product;
+  final ProductsModel? product;
   const OpenContainerProductCard({
-    Key key,
+    Key? key,
     this.product,
   }) : super(key: key);
 

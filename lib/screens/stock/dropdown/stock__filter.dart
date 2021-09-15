@@ -5,8 +5,8 @@ import 'package:women_shop/styles/appBarText.dart';
 class StockFilter extends StatefulWidget {
   final double height;
   const StockFilter({
-    Key key,
-    this.height,
+    Key? key,
+    required this.height,
   }) : super(key: key);
 
   @override

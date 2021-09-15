@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:women_shop/models/productsModel.dart';
 
 class DescriptionCarouselImg extends StatelessWidget {
-  final ProductGallery item;
-  const DescriptionCarouselImg({Key key, this.item}) : super(key: key);
+  final ProductGallery? item;
+  const DescriptionCarouselImg({Key? key, this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

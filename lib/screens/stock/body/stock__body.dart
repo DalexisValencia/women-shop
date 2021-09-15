@@ -5,7 +5,7 @@ import 'package:women_shop/screens/stock/dropdown/stock__filter.dart';
 import 'package:women_shop/screens/stock/body/stock__body--scrollBehavior.dart';
 
 class StockBody extends StatefulWidget {
-  const StockBody({Key key}) : super(key: key);
+  const StockBody({Key? key}) : super(key: key);
 
   @override
   _StockBodyState createState() => _StockBodyState();

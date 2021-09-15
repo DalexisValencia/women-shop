@@ -3,7 +3,7 @@ import 'package:women_shop/screens/details/description/dropdown/description_drop
 import 'package:women_shop/screens/details/description/dropdown/description_dropdownSize.dart';
 
 class DetailsDescriptionSelector extends StatelessWidget {
-  const DetailsDescriptionSelector({Key key}) : super(key: key);
+  const DetailsDescriptionSelector({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

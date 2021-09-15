@@ -4,8 +4,8 @@ class DetailsCarouselSliderDot extends StatelessWidget {
   final bool isActive;
   final slider;
   const DetailsCarouselSliderDot({
-    Key key,
-    this.isActive,
+    Key? key,
+    this.isActive = false,
     this.slider,
   }) : super(key: key);
 
@@ -27,7 +27,7 @@ class DetailsCarouselSliderDot extends StatelessWidget {
             width: 5,
             height: 5,
             decoration: BoxDecoration(
-              color: !isActive ? Colors.white : Colors.transparent,
+              color: isActive ? Colors.white : Colors.transparent,
               borderRadius: BorderRadius.circular(50),
             ),
           ),

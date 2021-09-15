@@ -1,5 +1,5 @@
 class CategoriesModel {
-  final String name;
+  final String? name;
   CategoriesModel({
     this.name,
   });

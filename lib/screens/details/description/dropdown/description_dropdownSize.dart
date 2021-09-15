@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:women_shop/styles/detailsText.dart';
 
 class DetailsDropDownSize extends StatefulWidget {
-  const DetailsDropDownSize({Key key}) : super(key: key);
+  const DetailsDropDownSize({Key? key}) : super(key: key);
 
   @override
   DetailsDropDownSizeState createState() => DetailsDropDownSizeState();
@@ -60,7 +60,7 @@ class DetailsDropDownSizeState extends State<DetailsDropDownSize> {
             )
             .toList(),
         onChanged: (val) {
-          _changeProperty(val);
+          _changeProperty(val ?? "");
         },
       ),
     );

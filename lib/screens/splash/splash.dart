@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key key}) : super(key: key);
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class SplashScreen extends StatelessWidget {
               CircularProgressIndicator(
                 backgroundColor: Colors.grey[900],
                 valueColor: new AlwaysStoppedAnimation<Color>(
-                  Colors.grey[400],
+                  (Colors.grey[400])!,
                 ),
               ),
               SizedBox(
@@ -26,7 +26,7 @@ class SplashScreen extends StatelessWidget {
               ),
               Text(
                 "Cargando..",
-                style: Theme.of(context).textTheme.headline6.copyWith(
+                style: Theme.of(context).textTheme.headline6!.copyWith(
                       color: Colors.grey[900],
                       fontFamily: 'Helvetica',
                       fontWeight: FontWeight.bold,

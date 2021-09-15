@@ -8,9 +8,9 @@ import 'package:women_shop/screens/details/carousel/description_carouselImage.da
 import 'package:women_shop/screens/details/carousel/description_carouselVideo.dart';
 
 class DetailsCarouselSliderWrapper extends StatefulWidget {
-  final List<ProductGallery> gallery;
+  final List<ProductGallery>? gallery;
   const DetailsCarouselSliderWrapper({
-    Key key,
+    Key? key,
     this.gallery,
   }) : super(key: key);
 
@@ -46,7 +46,7 @@ class _DetailsCarouselSliderWrapperState
                 _changeIndex(index);
               },
             ),
-            items: widget.gallery.map(
+            items: widget.gallery?.map(
               (i) {
                 return Builder(
                   builder: (BuildContext context) {
@@ -68,7 +68,7 @@ class _DetailsCarouselSliderWrapperState
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: widget.gallery.asMap().entries.map(
+                children: widget.gallery!.asMap().entries.map(
                   (e) {
                     return DetailsCarouselSliderDot(
                       slider: e.value,

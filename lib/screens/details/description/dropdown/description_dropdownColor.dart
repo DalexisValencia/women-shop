@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:women_shop/styles/detailsText.dart';
 
 class DetailsDropDownColor extends StatefulWidget {
-  const DetailsDropDownColor({Key key}) : super(key: key);
+  const DetailsDropDownColor({Key? key}) : super(key: key);
 
   @override
   DetailsDropDownColorState createState() => DetailsDropDownColorState();
@@ -51,7 +51,7 @@ class DetailsDropDownColorState extends State<DetailsDropDownColor> {
                 )
                 .toList(),
             onChanged: (val) {
-              _changeProperty(val);
+              _changeProperty(val ?? "");
             },
           ),
         ],

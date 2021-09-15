@@ -3,7 +3,7 @@ import 'package:women_shop/constants/conts.dart';
 import 'package:women_shop/styles/appBarText.dart';
 
 class StockAppBar extends StatelessWidget {
-  const StockAppBar({Key key}) : super(key: key);
+  const StockAppBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class StockBottomNavigationBar extends StatelessWidget {
-  const StockBottomNavigationBar({Key key}) : super(key: key);
+  const StockBottomNavigationBar({Key? key}) : super(key: key);
   final Color navBarBgColor = Colors.white;
   @override
   Widget build(BuildContext context) {

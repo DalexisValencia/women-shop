@@ -5,7 +5,7 @@ import 'package:women_shop/lists/categories.dart';
 import 'package:women_shop/styles/appBarText.dart';
 
 class DropdownFilter extends StatefulWidget {
-  const DropdownFilter({Key key}) : super(key: key);
+  const DropdownFilter({Key? key}) : super(key: key);
 
   @override
   _DropdownFilterState createState() => _DropdownFilterState();
@@ -13,7 +13,7 @@ class DropdownFilter extends StatefulWidget {
 
 class _DropdownFilterState extends State<DropdownFilter> {
   String dropdownValue = 'Shirt';
-  CategoriesBloc categoriesinstance;
+  CategoriesBloc? categoriesinstance;
   @override
   void initState() {
     categoriesinstance = BlocProvider.of<CategoriesBloc>(context);
@@ -38,8 +38,8 @@ class _DropdownFilterState extends State<DropdownFilter> {
           iconSize: 28,
           elevation: 0,
           style: AppBarTextFilter.titleSelection(context),
-          onChanged: (String value) {
-            categoriesinstance.add(ChangeCategory(value));
+          onChanged: (String? value) {
+            categoriesinstance!.add(ChangeCategory(value!));
             setState(() {
               dropdownValue = value;
             });
@@ -49,7 +49,7 @@ class _DropdownFilterState extends State<DropdownFilter> {
               return DropdownMenuItem(
                 value: e.name,
                 child: Text(
-                  e.name,
+                  e.name!,
                   textAlign: TextAlign.center,
                 ),
               );

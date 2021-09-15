@@ -7,7 +7,7 @@ import 'package:women_shop/screens/stock/body/stock__body.dart';
 import 'package:women_shop/screens/stock/stock__bottomNavBar.dart';
 
 class StockScreen extends StatelessWidget {
-  const StockScreen({Key key}) : super(key: key);
+  const StockScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

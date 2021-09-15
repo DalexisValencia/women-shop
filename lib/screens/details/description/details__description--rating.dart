@@ -4,9 +4,9 @@ import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/styles/detailsText.dart';
 
 class RatingDetails extends StatelessWidget {
-  final ProductsModel product;
+  final ProductsModel? product;
   const RatingDetails({
-    Key key,
+    Key? key,
     this.product,
   }) : super(key: key);
 
@@ -50,8 +50,9 @@ class RatingDetails extends StatelessWidget {
                         Icon(
                           Icons.star_rate_rounded,
                           size: 15,
-                          color:
-                              i < product.rating ? Colors.black : Colors.grey,
+                          color: i < product!.rating!.toDouble()
+                              ? Colors.black
+                              : Colors.grey,
                         ),
                       );
                     }

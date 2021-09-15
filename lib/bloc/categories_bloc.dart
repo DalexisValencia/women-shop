@@ -31,7 +31,7 @@ List<ProductsModel> _filterCategory(String category) {
     filterCategory = products;
   } else {
     filterCategory = products.where((element) {
-      return element.type.name.toLowerCase() == category;
+      return element.type?.name?.toLowerCase() == category;
     }).toList();
   }
   return filterCategory;

@@ -7,8 +7,8 @@ import 'package:women_shop/screens/stock/product/product__openContainer.dart';
 
 class ScrollBehaviorWidget extends StatefulWidget {
   const ScrollBehaviorWidget({
-    Key key,
-    this.onScrollChange,
+    Key? key,
+    required this.onScrollChange,
   }) : super(key: key);
   final Function onScrollChange;
 
@@ -27,14 +27,11 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
           // print(scrollNotification.metrics.pixels);
           widget.onScrollChange(scrollNotification.metrics.pixels);
         }
-        // if (scrollNotification is ScrollEndNotification) {}
-        return;
+        return false;
       },
-      // child: SingleChildScrollView(
       child: BlocBuilder<CategoriesBloc, CategoriesState>(
         builder: (BuildContext context, state) {
-          List<ProductsModel> products = state.props[0];
-          // print(products);
+          List<ProductsModel> products = state.props[0] as List<ProductsModel>;
           return products.length == 0
               ? Center(
                   child: Column(
@@ -51,7 +48,7 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
                       ),
                       Text(
                         "NO HAY RESULTADOS",
-                        style: Theme.of(context).textTheme.bodyText1.copyWith(
+                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
                               color: Colors.grey[500],
                             ),
                       ),
@@ -68,10 +65,6 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
                   mainAxisSpacing: MediaQuery.of(context).size.height * 0.02,
                   crossAxisSpacing:
                       MediaQuery.of(context).size.width * pHorizontally,
-                  // children: List.generate(
-                  //   10,
-                  //   (index) => ProductCard(),
-                  // ),
                   children: products
                       .map(
                         (item) => OpenContainerProductCard(

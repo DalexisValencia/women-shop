@@ -4,8 +4,8 @@ import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/styles/detailsText.dart';
 
 class DescriptionCarouselVideo extends StatefulWidget {
-  final ProductGallery item;
-  const DescriptionCarouselVideo({Key key, this.item}) : super(key: key);
+  final ProductGallery? item;
+  const DescriptionCarouselVideo({Key? key, this.item}) : super(key: key);
 
   @override
   _DescriptionCarouselVideoState createState() =>
@@ -14,8 +14,8 @@ class DescriptionCarouselVideo extends StatefulWidget {
 
 class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
     with SingleTickerProviderStateMixin {
-  VideoPlayerController _controller;
-  AnimationController _animationController;
+  late VideoPlayerController _controller;
+  late AnimationController _animationController;
   bool isPlaying = false;
   Duration compareDurationZero = Duration(
     hours: 0,
@@ -27,10 +27,9 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.network(
-      widget.item.url,
-      // 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
-    )
+    _controller = VideoPlayerController.network(widget.item?.url ?? ""
+        // 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+        )
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {
@@ -164,8 +163,8 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
 }
 
 class VideoApp extends StatefulWidget {
-  final VideoPlayerController playercontroller;
-  VideoApp({Key key, this.playercontroller}) : super(key: key);
+  final VideoPlayerController? playercontroller;
+  VideoApp({Key? key, this.playercontroller}) : super(key: key);
   @override
   _VideoAppState createState() => _VideoAppState();
 }
@@ -175,8 +174,8 @@ class _VideoAppState extends State<VideoApp> {
   Widget build(BuildContext context) {
     return Center(
       child: AspectRatio(
-        aspectRatio: widget.playercontroller.value.aspectRatio,
-        child: VideoPlayer(widget.playercontroller),
+        aspectRatio: widget.playercontroller?.value.aspectRatio ?? 0,
+        child: VideoPlayer(widget.playercontroller!),
       ),
     );
   }

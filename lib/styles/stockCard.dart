@@ -4,14 +4,14 @@ import 'package:women_shop/constants/conts.dart';
 
 class StockCardTextStyle {
   static TextStyle cardTag(BuildContext context) {
-    return Theme.of(context).textTheme.caption.copyWith(
+    return Theme.of(context).textTheme.caption!.copyWith(
           color: secondaryColor.withOpacity(0.5),
           fontFamily: 'Helvetica',
         );
   }
 
   static TextStyle cardName(BuildContext context) {
-    return Theme.of(context).textTheme.bodyText1.copyWith(
+    return Theme.of(context).textTheme.bodyText1!.copyWith(
           fontWeight: FontWeight.bold,
           fontSize: 14.3,
           color: secondaryColor,
@@ -20,7 +20,7 @@ class StockCardTextStyle {
   }
 
   static TextStyle cardPrice(BuildContext context) {
-    return Theme.of(context).textTheme.bodyText1.copyWith(
+    return Theme.of(context).textTheme.bodyText1!.copyWith(
           fontWeight: FontWeight.bold,
           fontSize: 13.7,
           color: secondaryColor,
