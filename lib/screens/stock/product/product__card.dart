@@ -6,9 +6,11 @@ import 'package:women_shop/styles/stockCard.dart';
 
 class ProductCard extends StatefulWidget {
   final ProductsModel? product;
+  final int? index;
   const ProductCard({
     Key? key,
     this.product,
+    this.index,
   }) : super(key: key);
 
   @override
@@ -20,10 +22,11 @@ class _ProductCardState extends State<ProductCard> {
 
   @override
   void initState() {
+    // print("${widget.index.toString()} index");
     super.initState();
     Timer(
         Duration(
-          milliseconds: 500,
+          milliseconds: 50 * widget.index!,
         ), () {
       setState(() {
         opacityLevel = 1;

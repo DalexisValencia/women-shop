@@ -6,9 +6,12 @@ import 'package:women_shop/screens/stock/product/product__card.dart';
 
 class OpenContainerProductCard extends StatelessWidget {
   final ProductsModel? product;
+  final int? index;
+
   const OpenContainerProductCard({
     Key? key,
     this.product,
+    this.index,
   }) : super(key: key);
 
   @override
@@ -24,6 +27,7 @@ class OpenContainerProductCard extends StatelessWidget {
       openElevation: 0,
       closedBuilder: (_, openContainer) {
         return ProductCard(
+          index: index,
           product: product,
         );
       },

@@ -66,9 +66,12 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget> {
                   crossAxisSpacing:
                       MediaQuery.of(context).size.width * pHorizontally,
                   children: products
+                      .asMap()
+                      .entries
                       .map(
                         (item) => OpenContainerProductCard(
-                          product: item,
+                          index: item.key,
+                          product: item.value,
                         ),
                       )
                       .toList(),
