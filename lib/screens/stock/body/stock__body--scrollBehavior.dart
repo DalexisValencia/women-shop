@@ -9,9 +9,7 @@ import 'package:women_shop/screens/stock/product/product__openContainer.dart';
 class ScrollBehaviorWidget extends StatefulWidget {
   const ScrollBehaviorWidget({
     Key? key,
-    required this.onScrollChange,
   }) : super(key: key);
-  final Function onScrollChange;
 
   @override
   _ScrollBehaviorWidgetState createState() => _ScrollBehaviorWidgetState();
@@ -30,10 +28,6 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget>
     _controllerScrollGirdView
       ..addListener(
         () {
-          // print("listener");
-          // print(_controllerScrollGirdView.position.pixels);
-          // widget.onScrollChange(_controllerScrollGirdView.position.pixels);
-          // print(_controllerScrollGirdView.position.pixels);
           if (_controllerScrollGirdView.position.pixels > 100 &&
               _controllerScrollGirdView.position.pixels < 200) {
             categoriesinstance?.add(ResizeFilterExpanded(true));
