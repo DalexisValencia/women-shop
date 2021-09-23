@@ -3,10 +3,10 @@ import 'package:women_shop/screens/stock/dropdown/stock__dropdown.dart';
 import 'package:women_shop/styles/appBarText.dart';
 
 class StockFilter extends StatefulWidget {
-  final double height;
+  final bool isExpanded;
   const StockFilter({
     Key? key,
-    required this.height,
+    required this.isExpanded,
   }) : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class _StockFilterState extends State<StockFilter> {
         ),
       ),
       width: MediaQuery.of(context).size.width,
-      height: widget.height,
+      height: widget.isExpanded ? 100 : 75,
       child: IntrinsicHeight(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,

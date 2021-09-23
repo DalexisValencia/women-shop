@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:women_shop/bloc/categories_bloc.dart';
+import 'package:women_shop/bloc/resize_filter/bloc/resize_filter_bloc.dart';
 import 'package:women_shop/constants/conts.dart';
 import 'package:women_shop/models/productsModel.dart';
 import 'package:women_shop/screens/stock/product/product__openContainer.dart';
@@ -20,16 +21,27 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _staggeredAnimation;
   ScrollController _controllerScrollGirdView = new ScrollController();
+  late ResizeFilterBloc? categoriesinstance;
 
   @override
   void initState() {
     super.initState();
+    categoriesinstance = BlocProvider.of<ResizeFilterBloc>(context);
     _controllerScrollGirdView
-      ..addListener(() {
-        // print("listener");
-        // print(_controllerScrollGirdView.position.pixels);
-        widget.onScrollChange(_controllerScrollGirdView.position.pixels);
-      });
+      ..addListener(
+        () {
+          // print("listener");
+          // print(_controllerScrollGirdView.position.pixels);
+          // widget.onScrollChange(_controllerScrollGirdView.position.pixels);
+          // print(_controllerScrollGirdView.position.pixels);
+          if (_controllerScrollGirdView.position.pixels > 100 &&
+              _controllerScrollGirdView.position.pixels < 200) {
+            categoriesinstance?.add(ResizeFilterExpanded(true));
+          } else if (_controllerScrollGirdView.position.pixels < 100) {
+            categoriesinstance?.add(ResizeFilterExpanded(false));
+          }
+        },
+      );
   }
 
   @override
@@ -37,7 +49,6 @@ class _ScrollBehaviorWidgetState extends State<ScrollBehaviorWidget>
     return BlocBuilder<CategoriesBloc, CategoriesState>(
       builder: (BuildContext context, state) {
         List<ProductsModel> products = state.props[0] as List<ProductsModel>;
-        print("actualizando en cada scroll");
         return products.length == 0
             ? Center(
                 child: Column(
