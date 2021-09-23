@@ -25,8 +25,6 @@ class _StockBodyState extends State<StockBody> {
       color: Colors.white,
       child: BlocBuilder<CategoriesBloc, CategoriesState>(
         builder: (BuildContext context, CategoriesState state) {
-          // CategoriesState stateModel = state;
-          // print(stateModel);
           return Column(
             children: [
               StockFilter(
