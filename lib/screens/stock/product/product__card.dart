@@ -18,88 +18,73 @@ class ProductCard extends StatefulWidget {
 }
 
 class _ProductCardState extends State<ProductCard> {
-  double opacityLevel = 0;
-
   @override
   void initState() {
     // print("${widget.index.toString()} index");
     super.initState();
-    Timer(
-        Duration(
-          milliseconds: 50 * widget.index!,
-        ), () {
-      setState(() {
-        opacityLevel = 1;
-      });
-    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedOpacity(
-        opacity: opacityLevel,
-        duration: Duration(
-          milliseconds: 500,
-        ),
-        child: Container(
-          child: Column(
-            children: [
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[400],
-                  ),
-                  child: Center(
-                    child: Text("card"),
-                  ),
-                ),
+    return Container(
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.grey[400],
               ),
-              Container(
-                padding: EdgeInsets.only(
-                  top: 5,
+              child: Center(
+                child: Text("card"),
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(
+              top: 5,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  // "Fashion Label",
+                  widget.product!.type!.name!,
+                  style: StockCardTextStyle.cardTag(context),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                FittedBox(
+                  fit: BoxFit.fitHeight,
+                  child: Text(
+                    // "name",
+                    widget.product!.name!.length >= 34
+                        ? widget.product!.name!.replaceRange(
+                            20,
+                            widget.product!.name!.length,
+                            '...',
+                          )
+                        : widget.product!.name!,
+                    style: StockCardTextStyle.cardName(context),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      // "Fashion Label",
-                      widget.product!.type!.name!,
-                      style: StockCardTextStyle.cardTag(context),
+                      // "\$ 50.00",
+                      "\$${widget.product!.price!}",
+                      style: StockCardTextStyle.cardPrice(context),
                     ),
-                    FittedBox(
-                      fit: BoxFit.fitHeight,
-                      child: Text(
-                        // "name",
-                        widget.product!.name!.length >= 34
-                            ? widget.product!.name!.replaceRange(
-                                20,
-                                widget.product!.name!.length,
-                                '...',
-                              )
-                            : widget.product!.name!,
-                        style: StockCardTextStyle.cardName(context),
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          // "\$ 50.00",
-                          "\$${widget.product!.price!}",
-                          style: StockCardTextStyle.cardPrice(context),
-                        ),
-                        Icon(
-                          Icons.favorite_border,
-                          color: Colors.grey,
-                          size: 18,
-                        )
-                      ],
+                    Icon(
+                      Icons.favorite_border,
+                      color: Colors.grey,
+                      size: 18,
                     )
                   ],
-                ),
-              )
-            ],
-          ),
-        ));
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
