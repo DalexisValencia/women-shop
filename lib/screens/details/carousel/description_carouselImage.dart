@@ -17,15 +17,15 @@ class DescriptionCarouselImg extends StatelessWidget {
         ),
         color: Colors.black,
       ),
-      child: Center(
-        child: Text(
-          'Carousel 1',
-          style: TextStyle(
-            fontSize: 16.0,
-            color: Colors.white,
-          ),
-        ),
-      ),
+      // child: Center(
+      //   child: Text(
+      //     'Carousel 1',
+      //     style: TextStyle(
+      //       fontSize: 16.0,
+      //       color: Colors.white,
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
