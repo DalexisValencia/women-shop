@@ -47,10 +47,16 @@ class _ProductCardState extends State<ProductCard> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[400],
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image: AssetImage(
+                        widget.product!.gallery![0].thumbnail.toString(),
+                      ),
+                    ),
                   ),
-                  child: Center(
-                    child: Text("card"),
-                  ),
+                  // child: Center(
+                  //   child: Text("card"),
+                  // ),
                 ),
               ),
               Container(

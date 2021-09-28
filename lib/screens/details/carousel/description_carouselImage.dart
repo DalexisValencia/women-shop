@@ -11,6 +11,10 @@ class DescriptionCarouselImg extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       // margin: EdgeInsets.symmetric(horizontal: 5.0),
       decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage(item!.url.toString()),
+          fit: BoxFit.cover,
+        ),
         color: Colors.black,
       ),
       child: Center(

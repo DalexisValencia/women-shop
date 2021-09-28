@@ -14,20 +14,20 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
-      ),
-      ProductGallery(
-        type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-1.1.jpg',
+        url: 'images/women-1.1.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-1.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
-      )
+      ),
+      ProductGallery(
+        type: 'img',
+        thumbnail: 'images/women-1.3.jpg',
+        url: 'images/women-2.1.jpg',
+      ),
     ],
     rating: 4,
     colors: [
@@ -48,17 +48,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-2.3.jpg',
+        url: 'images/women-2.1.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-2.1.jpg',
+        url: 'images/women-2.1.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-2.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       )
@@ -81,17 +81,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-3.1.jpg',
+        url: 'images/women-3.1.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-3.3.jpg',
+        url: 'images/women-3.3.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-3.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       )
@@ -114,21 +114,22 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        url: '',
+        thumbnail: 'images/women-4.1.jpg',
+        url: 'images/women-4.1.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-4.3.jpg',
+        url: 'images/women-4.3.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-3.3.jpg',
+        url: 'images/women-3.3.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-4.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       )
@@ -152,21 +153,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        url: '',
+        thumbnail: 'images/women-5.1.jpg',
+        url: 'images/women-5.1.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
-      ),
-      ProductGallery(
-        type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-5.3.jpg',
+        url: 'images/women-5.3.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-5.3.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       )
@@ -190,22 +187,22 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-2.2.jpg',
+        url: 'images/women-2.2.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-3.2.jpg',
+        url: 'images/women-3.2.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-4.2.jpg',
+        url: 'images/women-4.2.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-5.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
@@ -227,22 +224,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-4.2.jpg',
+        url: 'images/women-4.2.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
-      ),
-      ProductGallery(
-        type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-2.1.jpg',
+        url: 'images/women-2.1.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-2.3.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
@@ -264,22 +256,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-5.3.jpg',
+        url: 'images/women-5.2.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
-      ),
-      ProductGallery(
-        type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-5.1.jpg',
+        url: 'images/women-5.3.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-4.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
@@ -302,22 +289,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-3.1.jpg',
+        url: 'images/women-3.1.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
-      ),
-      ProductGallery(
-        type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-2.3.jpg',
+        url: 'images/women-2.3.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-1.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
@@ -340,22 +322,22 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-5.2.jpg',
+        url: 'images/women-5.2.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-5.1.jpg',
+        url: 'images/women-5.1.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-2.3.jpg',
+        url: 'images/women-2.3.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-2.2.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),
@@ -378,21 +360,17 @@ List<ProductsModel> products = [
     gallery: [
       ProductGallery(
         type: 'img',
-        url: '',
+        thumbnail: 'images/women-3.3.jpg',
+        url: 'images/women-3.3.jpg',
       ),
       ProductGallery(
         type: 'img',
-        thumbnail: '',
-        url: '',
-      ),
-      ProductGallery(
-        type: 'img',
-        thumbnail: '',
-        url: '',
+        thumbnail: 'images/women-3.2.jpg',
+        url: 'images/women-3.2.jpg',
       ),
       ProductGallery(
         type: 'video',
-        thumbnail: '',
+        thumbnail: 'images/women-5.1.jpg',
         url:
             'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
       ),

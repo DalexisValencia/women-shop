@@ -81,20 +81,20 @@ class _DescriptionCarouselVideoState extends State<DescriptionCarouselVideo>
                     (_controller.value.position == compareDurationZero)
                 ? Container(
                     decoration: BoxDecoration(
-                      // image: DecorationImage(
-                      //   image: AssetImage(""),
-                      // ),
+                      image: DecorationImage(
+                        image: AssetImage(widget.item!.thumbnail.toString()),
+                      ),
                       color: Colors.black,
                     ),
-                    child: Center(
-                      child: Text(
-                        'Preview Image',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
+                    // child: Center(
+                    //   child: Text(
+                    //     'Preview Image',
+                    //     style: TextStyle(
+                    //       fontSize: 16.0,
+                    //       color: Colors.white,
+                    //     ),
+                    //   ),
+                    // ),
                   )
                 : _controller.value.isInitialized
                     ? VideoApp(
