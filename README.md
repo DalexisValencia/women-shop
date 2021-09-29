@@ -9,6 +9,8 @@ In the details screen, we see the carousel gallery and the description.
 
 and that is all.
 
+### *Note: The images are subject to copyright, in this case they are only used as a visual example*
+
 ## In this app you'll see:
 
 - Null safety.
@@ -19,6 +21,13 @@ and that is all.
 
 ## Screens:
 
-- Splash.
-- Store.
-- Details.
+- Splash: 
+<img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/1.splash-screen.jpg" alt="drawing" width="450"/>
+
+- Store:
+<img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/2.%20stock-screen.jpg" alt="drawing" width="450"/>
+
+- Details:
+<img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/3.%20detail-screen.jpg" alt="drawing" width="450"/>
+
+### **See this app in this link [this link](https://youtu.be/HJgBrEp9mac)**
