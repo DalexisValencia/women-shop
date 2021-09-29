@@ -30,4 +30,8 @@ and that is all.
 - Details:
 <img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/3.%20detail-screen.jpg" alt="drawing" width="450"/>
 
-### **See this app in this link [this link](https://youtu.be/HJgBrEp9mac)**
+## Preview:
+
+![Alt Text](https://github.com/DalexisValencia/firstTest-flutter-app/blob/master/previews/gift/preview-all.gif)
+
+### **See this app in teh best quality [this link](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)**
