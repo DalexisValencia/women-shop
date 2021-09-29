@@ -20,5 +20,6 @@ and that is all.
 ## Screens:
 
 - Splash.
+<img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/1.splash-screen.jpg" alt="drawing" width="450"/>
 - Store.
 - Details.
