@@ -31,7 +31,7 @@ and that is all.
 <img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/3.%20detail-screen.jpg" alt="drawing" width="450"/>
 
 ## Preview:
-
 <img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif" align="left" width="300" >
 
-### **See this app in teh best quality [this link](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)**
+
+## **See this app in [youtube](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)**
