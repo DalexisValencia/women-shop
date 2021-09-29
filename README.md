@@ -7,7 +7,7 @@ A new Flutter project.
 This project is a simple store create with flutter.
 This app use:
 
-- The bloc pattern.
+- Bloc pattern.
 - Motions and animation.
-- Video ecample 
+- Example with cideo 
 
