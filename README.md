@@ -22,4 +22,6 @@ and that is all.
 - Splash.
 <img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/1.splash-screen.jpg" alt="drawing" width="450"/>
 - Store.
+<img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/2.%20stock-screen.jpg" alt="drawing" width="450"/>
 - Details.
+<img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/3.%20detail-screen.jpg" alt="drawing" width="450"/>
