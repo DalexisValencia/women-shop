@@ -33,5 +33,6 @@ and that is all.
 ## Preview:
 <img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif" align="left" width="300" >
 
+--
 
 ## **See this app in [youtube](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)**
