@@ -30,6 +30,6 @@ and that is all.
 - Details:
 <img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/3.%20detail-screen.jpg" alt="drawing" width="450"/>
 
-## Preview (see this video in [youtube](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif))
+## Preview (see this video in [youtube](https://youtu.be/HJgBrEp9mac))
 <img src="https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif" align="left" width="300" >
 
