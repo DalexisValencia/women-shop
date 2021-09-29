@@ -35,4 +35,4 @@ and that is all.
 
 --
 
-## **See this app in [youtube](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)**
+## **See this video in [youtube](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)**
