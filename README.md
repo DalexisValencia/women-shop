@@ -9,7 +9,7 @@ In the details screen, we see the carousel gallery and the description.
 
 and that is all.
 
-Note: The images are subject to copyright, in this case they are only used as a visual example
+## *Note: The images are subject to copyright, in this case they are only used as a visual example*
 
 ## In this app you'll see:
 
