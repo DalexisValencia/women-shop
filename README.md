@@ -32,6 +32,6 @@ and that is all.
 
 ## Preview:
 
-![Alt Text](https://github.com/DalexisValencia/firstTest-flutter-app/blob/master/previews/gift/preview-all.gif)
+![Alt Text](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)
 
 ### **See this app in teh best quality [this link](https://github.com/DalexisValencia/women-shop/blob/main/readmeFiles/preview-app.gif)**
